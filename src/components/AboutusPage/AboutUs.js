@@ -1,11 +1,11 @@
 import React from 'react'
 import './AboutUs.css'
-import pcb from './pcb-workshop.jpg'
-import vlsi from './vlsi-workshop.jpg'
-import tk1 from './talk_show1.jpg'
-import tk2 from './talk_show2.jpg'
-import tk3 from './talk_show3.jpg'
-import pic from '../HomePage/pcb5.jpg'
+import pcb from '../../images/pcb-workshop.jpg'
+import vlsi from '../../images/vlsi-workshop.jpg'
+import tk1 from '../../images/talk_show1.jpg'
+import tk2 from '../../images/talk_show2.jpg'
+import tk3 from '../../images/talk_show3.jpg'
+import pic from '../../images/pcb5.jpg'
 function AboutUs() {
   return (
     <div className='rabout'>

@@ -1,6 +1,6 @@
 import React from 'react'
 import './Faculty.css'
-import image from  '../../Anup Kumar Bhattacharjee.f2f6f6e5.jpeg'
+import image from  '../../images/Anup Kumar Bhattacharjee.f2f6f6e5.jpeg'
 function Faculty() {
   return (
     <div className='rprofessors'>

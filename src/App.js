@@ -1,32 +1,40 @@
-
 import './App.css';
 import Footer from './components/Footer/Footer';
 import Home from './components/HomePage/Home';
-import Navbar from './components/Navbar/Navbar'
-import { useState , useEffect } from 'react';
-import GridLoader from "react-spinners/GridLoader"
-function App() {
+import AboutUs from './components/AboutusPage/AboutUs';
+import Team from './components/TeamPage/Team';
+import Faculty from './components/FacultyPage/Faculty';
+import Navbar from './components/Navbar/Navbar';
+import { useState, useEffect } from 'react';
+import GridLoader from 'react-spinners/GridLoader';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
- const [loading,setloading] = useState(false);
- useEffect(()=>{
-   setloading(true)
-   setTimeout(()=>{
-    setloading(false)
-   },5000)
- },[])
+function App() {
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 5000);
+  }, []);
 
   return (
     <div className="App">
-      {
-        loading? 
-        <GridLoader className='my-loader' color="#36d7b7" />
-        :
-        <div>
-        <Navbar/>
-        <Footer/>
-          </div>
-      }
- 
+      {loading ? (
+        <GridLoader className="my-loader" color="#36d7b7" />
+      ) : (
+        <Router>
+          <Navbar />
+          <Routes>
+            <Route exact path="/" element={<Home />} />
+            <Route exact path="/about" element={<AboutUs />} />
+            <Route exact path="/team" element={<Team />} />
+            <Route exact path="/faculty" element={<Faculty />} />
+          </Routes>
+          <Footer />
+        </Router>
+      )}
     </div>
   );
 }

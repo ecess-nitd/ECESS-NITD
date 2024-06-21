@@ -1,9 +1,9 @@
 import React from 'react'
 import './Team.css'
-import memberPic from './images/chakri_img.jpg'
-import yash from './images/yash-img.png'
-import souvik from './images/Screenshot 2023-05-18 095026.png'
-import aditi from './images/ADITI.png'
+import memberPic from '../../images/chakri_img.jpg'
+import yash from '../../images/yash-img.png'
+import souvik from '../../images/Screenshot 2023-05-18 095026.png'
+import aditi from '../../images/ADITI.png'
 function Team() {
   return (
     <div className='rmembers'>
