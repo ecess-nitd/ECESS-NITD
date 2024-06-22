@@ -1,72 +1,18 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
 
 .whole-website{
     width:100%;
-    
-}
-#loading-page{
-    display: none;
-    position: fixed;
-    z-index:9999;
-    background: #000;
-    width:100%;
-    height:720px;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    transition: opacity 0.25s , visibility 1s ;
-}
-.loading-page{
-    opacity:0;
-    visibility: hidden;
-   
-}
-.name{
-    font-size:90px;
-    font-weight:600;
-    display: flex;
-    flex-direction: row;
-    background-image: -webkit-linear-gradient(left,aqua,green);
-    -webkit-text-fill-color:transparent;
-    -webkit-background-clip:text; 
-}
-
-.decoration{
-    width:110px;
-    height:8px;
-    border-radius:4px;
-    background-color:white;
-    animation: color 2s ease-in-out infinite;
-    position: relative;
-    overflow: hidden;
-}
-.decoration div{
-    height:100%;
-    /* width:25px; */
-    background-color:#f10707;
-    position: absolute;
-    animation: tex 3s ease-in-out infinite;
-    transition:0.5s;
-}
-@keyframes tex{
-    0%{
-        
-        width:0px;
-    }
-    25%{
-    
-        width:110px;
-    }
-    50%{
-        width:55px;
-    }
-    100%{
-        width:0px;
-    }
+    /* margin-top: 50px;     */
 }
 .primary-section {
     width: 100%;
-    height: 400px;
+    height: 70vh;
+    background-repeat: no-repeat;
     background-color:white;
     background-attachment: fixed;
     background-size:100% 600px;
@@ -76,31 +22,242 @@
     display: flex;
     justify-content: center;
     align-items:center;
-    width:100%;
-    background-color:white;
-    background-attachment:unset;
-    object-fit:fill;
 }
 
 .section {
-    width:350px;
-    height:720px;
-    background-color: rgb(66, 205, 247);
-    margin-top:2rem;
+    margin: 20px;
+    width: 30vw;
+    height: 30vw;
+  }
+
+  .one{
+    background-image: url(../../images/mission.jpg);
+    background-size: 18,0%;
+    background-repeat: repeat-y;
+    background-position: center;    
+  }
+
+  .two{
+    background-image: url(../../images/semiconductor.jpg);
+    background-size: 190%;
+    background-repeat: repeat-y;
+    background-position: center;   
+  }
+
+  .three{
+    background-image: url(../../images/nitdgp1.png);
+    background-size: 190%;
+    background-repeat: repeat-y;
+    background-position: center;   
+  }
+  
+  .card {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    margin: 20px;
+    /* background: #fff; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 1.3s ease;
+  }
+  
+  .heading {
+    font-size: 48px;
+    font-weight: bold;
+    transition: all 1.3s ease;
+    color: bisque;
+    position: absolute;
+    opacity: 1;
+  }
+  
+  .description {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    position: absolute;
+    opacity: 1;
+    padding: 10px;
+    font-weight: 500;
+    font-size: 16px;
+    opacity: 0;
+    transition: opacity 1.3s ease;
+    text-align: center;
+    background: rgba(42, 82, 118,0.65);
+    color: white;
+    width: 100%;
+    height: 250%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .description>p{
+    width: 75%;
+    color:white;
+    position: relative;
+    top: 60px;
+    transition: transform 1.3s ease;
+  }
+  
+  .card:hover .heading {
+    z-index: 5000;
+    transform: translateY(-10rem);
+  }
+  
+  .card:hover .description {
+    opacity: 1;
+  }
+
+  .card:hover .description>p{
+    transform: translateY(-25px);
+  }
+
+/* .App {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section {
+    margin: 20px;
+    width: 30vw;
+    height: 30vw;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    margin: 20px;
+}
+
+.card-area{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    >h3{
+        color: bisque;
+        position: relative;
+        top: 50%;
+    }
+}
+
+/* .mission{
+    background-image: url('../../images/semiconductor.jpg');
+    background-size: 190%;
+    background-repeat: repeat-y;
+    background-position: center;    
+}
+
+.vision{
+    background-image: url('../../images/pcb5.jpg');
+    background-size: 190%;
+    background-repeat: no-repeat;
+    background-position: center;    
+}
+
+.values{
+    background-image: url('../../images/nitdgp1.png');
+    background-size: 80%;
+    background-repeat: repeat-y;
+    background-position: center;    
+} */
+
+
+
+/* .card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(91, 130, 177, 0.6);
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+  
+  .card:hover .card-overlay {
+      opacity: 1;
+    }
+
+    .card:hover .card-area>h3{
+        visibility: hidden;
+    }
+    
+    .card-text {
+        text-align: center;
+        padding: 10px;
+    }
+    
+    .card-text h3 {
+        margin-bottom: 10px;
+    }
+    
+    .card-text p {
+        font-size: 14px;
+    }
+    
+
+.card-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.card-heading{
+    position: relative;
+    top: 45%;
+}
+
+.description{
+    visibility: hidden;
+}
+
+
+.card:hover .description{
+        visibility: visible;
+    }
+
+    .card:hover .card-heading{
+        position: relative;
+        top: -100px;
+        transition: position 500ms;
+    } */
+
+    
+    /* .section {
+        width:350px;
+        height:720px;
+        background-color: rgb(66, 205, 247);
+        margin-top:2rem;
     margin-bottom:2rem;
     margin-right: auto;
     margin-left: auto;
     border-radius:30px;
     border-bottom:30px;
-}
+} */
 
-.section:hover{
- scale:1.02;
- box-shadow:2px 2px 0.7 gray;
-}
+/* .section:hover{
+    scale:1.02;
+    box-shadow:2px 2px 0.7 gray;
+} */
 
 
-.heading {
+/* .heading {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -133,18 +290,18 @@ img {
 	max-width: 100%;
 	aspect-ratio: 3 / 2;
 	object-fit: cover;
-}
+} */
 
 
 
 
-@media screen and (max-width:800px) {
-  
+/* @media screen and (max-width:800px) {
+    
     .secondary-section {
         display: flex;
         flex-direction: column;
     }
-
+    
     .section {
         width: 580px;
         height:800px;
@@ -154,21 +311,21 @@ img {
     .one {
         height:800px;
     }
-
+    
     .two {
         height:600px;
     }
-
+    
     .descreption {
         font-size: 24px;
     }
-
+    
     .heading {
         font-size: 34px;
     }
     
- img { 
-    width:150%;
+    img { 
+        width:150%;
     }
 }
 
@@ -193,9 +350,71 @@ img {
     .descreption {
         font-size:16px;
     }
-
+    
     
 img {
     width:140%;
 }
+} */
+/* 
+#loading-page{
+    display: none;
+    position: fixed;
+    z-index:9999;
+    background: #000;
+    width:100%;
+    height:720px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: opacity 0.25s , visibility 1s ;
 }
+.loading-page{
+    opacity:0;
+    visibility: hidden; */
+   
+/* } */
+/* .name{
+    font-size:90px;
+    font-weight:600;
+    display: flex;
+    flex-direction: row;
+    background-image: -webkit-linear-gradient(left,aqua,green);
+    -webkit-text-fill-color:transparent;
+    background-clip:text; 
+} */
+
+/* .decoration{
+    width:110px;
+    height:8px;
+    border-radius:4px;
+    background-color:white;
+    animation: color 2s ease infinite;
+    position: relative;
+    overflow: hidden;
+}
+.decoration div{
+    height:100%;
+    width:25px;
+    background-color:#f10707;
+    position: absolute;
+    animation: tex 3s ease infinite;
+    transition:0.5s;
+} */
+/* @keyframes tex{
+    0%{
+        
+        width:0px;
+    }
+    25%{
+    
+        width:110px;
+    }
+    50%{
+        width:55px;
+    }
+    100%{
+        width:0px;
+    }
+} */ 

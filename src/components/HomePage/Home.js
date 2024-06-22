@@ -1,18 +1,86 @@
-import React from 'react'
-import './home.css'
-import logo from '../../images/ecess-logo.png'
-import pcb1 from '../../images/pcb1.jpg'
-import pcb5 from '../../images/pcb5.jpg'
-import bg from '../../images/background.jpg'
-import Carousel from './carousel'
-import Navbar from '../Navbar/Navbar'
+import React from "react";
+import "./home.css";
+import bg from "../../images/semiconductor.jpg";
+import ImageAccordion from "./carousel.js";
+import img1 from '../../images/ecedepartment1.jpeg';
+import img2 from '../../images/ecedepartment2.jpeg';
+import img3 from '../../images/ecedept1-square.png';
+
+
+
+const items = [
+  { image: `${img1}`},
+  { image: `${img2}` },
+  { image: `${img3}` },
+];
 
 function Home() {
   return (
     <div className="whole-website">
-      <div className="primary-section" style={{ backgroundImage: `url(${bg})`, backgroundSize: 'contain' }}>
-      </div>
+      <div
+        className="primary-section"
+        style={{ backgroundImage: `url()` }}
+      ></div>
       <div className="secondary-section">
+        <div className="section " >
+          <div className="card one">
+            <div className="heading">MISSION</div>
+            <div className="description mission-desc">
+              <p> To develop a community by the students of the Electronics and
+                Communication Department that will work towards the welfare of the
+                department and its students in general. To develop a strong alumni
+                network and involve them in conducting various seminars as well as
+                career guidance assistance via interaction sessions with the
+                students of Electronics and Communication Engineering. To
+                systematically access the computer laboratory of the department
+                for maximum utilization by the students and software that can be
+                made available to the students to hone their software skills and
+                perform necessary simulations.</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="section ">
+          <div className="card two">
+            <div className="heading">VISION</div>
+            <div className="description">
+              <p> To produce highly competent and resourceful young engineers
+                who can perform well in varied professions. To develop a
+                strong fundamental base which enables students to explore
+                academic and collaborative interactions with industry,
+                academia and research organizations. To develop excellent
+                research facilities</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="section ">
+          <div className="card three">
+            <div className="heading">VALUES</div>
+            <div className="description">
+              <p> The embryonic formation of the Department of Electronics and
+                Communication Engineering was in the year 1983 with the
+                introduction of an undergraduate course. Situated amidst a lush
+                green campus with teak plantations, the Department, over time, has
+                grown in several dimensions and provides a magnetic ambience in
+                teaching and learning. The faculties are engaged in research in
+                diverse topics focussing on Telecommunication, Antenna and
+                Microwave, Microelectronics and VLSI, Signal and Image processing
+                and Computational Systems Biology.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* <CarouselFadeExample /> */}
+      <ImageAccordion items={items} />
+    </div>
+  );
+}
+
+export default Home;
+
+/*
+/* <div className="secondary-section">
         <div className="section ">
           <div className="logo"> <img className="logo" src={logo} alt="" /> </div>
           <div className="heading"> MISSION  </div>
@@ -40,13 +108,77 @@ function Home() {
             course.Situated amidst lush green campus with teak plantations,the Department, over the time, has grown in several dimensions and
             provides a magnetic ambience in teaching and learning.The faculties are engaged in research in diverse topics focussing in
             Telecommunication, Antenna and Microwave, Microelectronics and  VLSI, Signal and Image processing and Computational Systems Biology.
-          </div>
-        </div>
-      </div>
-      <Carousel />
+          </div> */
+/* </div> */
+/* </div> */
 
-    </div>
-  )
-}
+// </div > */}
+//   <div className="card">
+//     {/* <div className="card-area mission">
+//       <h3>MISSION</h3>
+//     </div>
+//     <div className="card-overlay"> */}
+//     <div className="card-text">
+//       <h3 className="card-heading">MISSION</h3>
+//       <p className="description">
+//         To develop a community by the students of the Electronics and
+//         Communication Department that will work towards the welfare of
+//         the department and its students in general. To develop a strong
+//         alumni network and involve them in conducting various seminars
+//         as well as career guidance assistance via interaction sessions
+//         with the students of Electronics and Communication Engineering.
+//         To systematically access to the computer laboratory of the
+//         department for maximum utilization by the students and software
+//         that can be made available to the students to hone their
+//         software skills and perform necessary simulations.
+//       </p>
+//     </div>
+//     {/* </div> */}
+//   </div>
+// </div>
 
-export default Home
+// <div className="section two">
+//   <div className="card">
+//     <div className="card-area vision">
+//       <p>Vision</p>
+//     </div>
+//     <div className="card-overlay">
+//       <div className="card-text">
+//         <h3>VISION</h3>
+//         <p>
+//           To produce highly competent and resourceful young engineers
+//           who can perform well in varied professions. To develop a
+//           strong fundamental base which enables students to explore
+//           academic and collaborative interactions with industry,
+//           academia and research organizations. To develop excellent
+//           research facilities
+//         </p>
+//       </div>
+//     </div>
+//   </div>
+// </div>
+
+// <div className="section three">
+//   <div className="card">
+//     <div className="card-area values">
+//       <p>Values</p>
+//     </div>
+//     <div className="card-overlay">
+//       <div className="card-text">
+//         <h3>VALUES</h3>
+//         <p>
+//           The embryonic formation of the Department of Electronics and
+//           Communication Engineering was in the year 1983 with the
+//           introduction of an undergraduate course. Situated amidst a
+//           lush green campus with teak plantations, the Department,
+//           overtime, has grown in several dimensions and provides a
+//           magnetic ambience in teaching and learning. The faculties are
+//           engaged in research in diverse topics focussing on
+//           Telecommunication, Antenna and Microwave, Microelectronics and
+//           VLSI, Signal and Image processing and Computational Systems
+//           Biology.
+//         </p>
+//       </div>
+//     </div>
+//   </div>
+// </div>*/

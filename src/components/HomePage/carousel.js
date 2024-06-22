@@ -1,28 +1,36 @@
-import React, { useState , useEffect } from 'react'
-import logo from '../../images/pcb1.jpg'
-import img1 from '../../images/ecedepartment1.jpeg'
-import img2 from '../../images/ecedepartment2.jpeg'
-import img3 from '../../images/ecedepartment3.jpeg'
-import 'pure-react-carousel/dist/react-carousel.es.css' ;
-import './carousel.css'
-function Carousel() {
-  const [index,setindex]=useState(0);
-  const images = [img1,img2,img3];
-  useEffect(()=>{
-    const intervalid = setInterval(()=>{
-      setindex(previndex=>(previndex+1)%images.length);
-    },3000);
-    return () => clearInterval(intervalid);
-  },[]);
+import React, { useState } from "react";
+import "./carousel.css";
+
+const ImageAccordion = ({ items = [] }) => {
+  const [active, setActive] = useState(0);
+
+  const handleToggle = (index) => setActive(index);
 
   return (
-    <div className='rgallery'>
-    <h1 className='rgalleryHeading'>Gallery</h1>
-    <div className='rcarousel'>
-      <img className='reach_img' src={images[index]} alt='slider'/>
-    </div>
-    </div>
-  )
-}
+    <section className="image-accordion">
+      {items.map((item, index) => {
+        const isActive = active === index ? "active" : "";
+        return (
+          <article
+            key={index}
+            className={`image-accordion-item ${isActive}`}
+            onClick={() => handleToggle(index)}
+            onMouseEnter={() => handleToggle(index)}
+          >
+            <img src={item.image} alt={item.header} />
+          </article>
+        );
+      })}
+    </section>
+  );
+};
 
-export default Carousel
+export default ImageAccordion;
+
+            // <div className="content">
+            //   {/* <span className="material-symbols-outlined">photo_camera</span> */}
+            //   <div>
+            //     <h2>{item.header}</h2>
+            //     <p>{item.text}</p>
+            //   </div>
+            // </div>
