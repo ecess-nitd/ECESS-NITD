@@ -3,7 +3,7 @@
   background-color: rgb(91, 90, 90);
   display: flex;
   overflow: hidden;
-  height: 700px; /* Adjust height as needed */
+  height: 800px; /* Adjust height as needed */
 }
 
 .image-accordion-item {
@@ -48,81 +48,3 @@
 .image-accordion-item:not(.active) {
   flex: 1;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* .rgallery {
-    text-align: center;
-  }
-  
-  .rgalleryHeading {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-  }
-  
-  .rcarousel {
-    position: relative;
-    width: 80%;
-    max-width: 600px;
-    margin: 0 auto;
-    overflow: hidden;
-  }
-  
-  .imageContainer {
-    width: 100%;
-    height: auto;
-    position: relative;
-  }
-  
-  .reach_img {
-    width: 100%;
-    height: auto;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: opacity 1s ease-in-out;
-    opacity: 1;
-  }
-  
-  .reach_img.hidden {
-    opacity: 0;
-  }
-  
-  .prevButton,
-  .nextButton {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    border: none;
-    color: white;
-    font-size: 2rem;
-    cursor: pointer;
-    padding: 0.5rem;
-    z-index: 10;
-  }
-  
-  .prevButton {
-    left: 0;
-  }
-  
-  .nextButton {
-    right: 0;
-  }
-  
-  .prevButton:hover,
-  .nextButton:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-  }
-   */
