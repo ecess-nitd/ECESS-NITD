@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Belanosima&display=swap');
+ 
+body {
+    background-color: #f0f0f0;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+ 
+.main-event-section {
+    display: flex;
+    justify-content: center;
+    padding: 20px;   
+
+    background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
+    background-size: cover;
+    min-height: 100vh;
+}
+ 
+.event-details-section {
+    margin-top: 7rem;
+    text-align: center;
+    font-family: 'Averia Serif Libre', serif;
+    background-color: #fff;
+    width: 90%;
+    max-width: 750px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 20px;
+}
+ 
+.header-event {
+    margin: auto;
+    width: 100%;
+    padding: 15px;
+    border-bottom: 2px solid #000000;
+    background-color: #ffffff;
+}
+ 
+.header-event h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+.main-content-event {
+    width: 100%;
+    margin: auto;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    background-color: #fff;
+}
+ 
+.event-image-event {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+ 
+.event-image-event img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+ 
+.description-event {
+    font-size: 18px;
+    line-height: 1.6;
+    font-family: 'Roboto', sans-serif;
+}
+
+.event-details-event {
+    padding: 0 20px;
+    text-align: left;
+}
+ 
+.event-info-event {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.8;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.footer-event {
+    width: 100%;
+    margin: auto;
+    padding: 20px 0;
+    background-color: #ffffff;
+    border-top: 2px solid #000000;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+ 
+.darksoul-hover-fill-button2 {
+    position: relative;
+    display: flex;
+    width: 200px;
+    height: 50px;
+    border-radius: 25px;
+    outline: none;
+    border: 1px solid rgb(16, 191, 197);
+    background-color: white;
+    font-family: 'Belanosima', sans-serif;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}         
+ 
+.color-fill-2 {
+    position: absolute;
+    width: 0;
+    height: 100%;
+    border-radius: 25px;
+    background-color: rgb(16, 191, 197);
+    transition: all 0.3s ease;
+} 
+ 
+.darksoul-hover-fill-button2:hover .color-fill-2 {
+    width: 100%;
+}   
+ 
+/* .darksoul-hover-fill-button2:hover {
+     color: white;
+}  */
+ 
+.darksoul-hover-fill-button2 p {
+    margin: 0;
+    z-index: 10;
+    transition: color 0.3s ease;
+}   
+ 
+@media (max-width: 768px) {
+    .event-details-section {
+        width: 100%;
+    }
+ 
+    .main-content-event, .footer-event {
+        width: 100%;
+    }
+ 
+    .event-details-event {
+        font-size: 16px;
+    }
+ 
+    .event-info-event {
+        font-size: 14px;
+    }
+}
+ 
+@media (max-width: 480px) {
+    .event-details-section {
+        padding: 10px;
+    }
+ 
+    .event-details-event {
+        font-size: 14px;
+    }
+ 
+    .event-info-event {
+        font-size: 12px;
+    }
+
+    .darksoul-hover-fill-button2 {
+        width: 150px;
+        height: 40px;
+        font-size: 14px;
+    }
+}
+ 

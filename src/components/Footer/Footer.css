@@ -1,7 +1,6 @@
 .all-pages_footer{
     display: flex;
     flex-direction: column;
-    margin-top:20px;
     background-color:teal;
     color: rgb(18, 17, 16);
     padding:10px;

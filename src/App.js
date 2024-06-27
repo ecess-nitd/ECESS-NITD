@@ -3,6 +3,8 @@ import Footer from './components/Footer/Footer';
 import Home from './components/HomePage/Home';
 import AboutUs from './components/AboutusPage/AboutUs';
 import Team from './components/TeamPage/TeamSection';
+import Event from './components/Events/EventSection';
+import EventDetail from './components/Events/EventDetails'
 import Faculty from './components/FacultyPage/Faculty';
 import Navbar from './components/Navbar/Navbar';
 import { useState, useEffect } from 'react';
@@ -32,6 +34,8 @@ function App() {
             <Route exact path="/about" element={<AboutUs />} />
             <Route exact path="/team" element={<Team />} />
             <Route exact path="/faculty" element={<Faculty />} />
+            <Route exact path="/events" element={<Event />} />
+            <Route exact path='/events/:id' element={ <EventDetail />} />
           </Routes>
           <Footer />
         </Router>
