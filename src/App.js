@@ -10,6 +10,7 @@ import Navbar from './components/Navbar/Navbar';
 import { useState, useEffect } from 'react';
 import GridLoader from 'react-spinners/GridLoader';
 import 'remixicon/fonts/remixicon.css';
+import ScrollToTop from './components/ScrollToTop';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
         <GridLoader className="my-loader" color="#36d7b7" />
       ) : (
         <Router>
+          <ScrollToTop/>
           <Navbar />
           <Routes>
             <Route exact path="/" element={<Home />} />
