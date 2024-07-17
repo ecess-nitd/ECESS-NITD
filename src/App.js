@@ -2,11 +2,12 @@ import './App.css';
 import Footer from './components/Footer/Footer';
 import Home from './components/HomePage/Home';
 import AboutUs from './components/AboutusPage/AboutUs';
-import Team from './components/TeamPage/Team';
+import Team from './components/TeamPage/TeamSection';
 import Faculty from './components/FacultyPage/Faculty';
 import Navbar from './components/Navbar/Navbar';
 import { useState, useEffect } from 'react';
 import GridLoader from 'react-spinners/GridLoader';
+import 'remixicon/fonts/remixicon.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
