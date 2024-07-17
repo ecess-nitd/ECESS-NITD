@@ -7,7 +7,11 @@ import img2 from '../../images/ecedepartment2.jpeg';
 import img3 from '../../images/ecedept1-square.png';
 import Carousel from "./carousel-actual.js";
 
+
+import Carousel from "./carousel-actual.js";
+
 const items = [
+  { image: `${img1}` },
   { image: `${img1}` },
   { image: `${img2}` },
   { image: `${img3}` },
@@ -40,6 +44,7 @@ function Home() {
         <div className="section" >
           <div className="card one">
             <div className="heading">Mission</div>
+            <div className="heading">Mission</div>
             <div className="description mission-desc">
               <p> To develop a community by the students of the Electronics and
                 Communication Department that will work towards the welfare of the
@@ -60,6 +65,9 @@ function Home() {
             <div className="heading">Vision</div>
             <div className="description ">
               <p className="vision-desc"> To produce highly competent and resourceful young engineers
+            <div className="heading">Vision</div>
+            <div className="description ">
+              <p className="vision-desc"> To produce highly competent and resourceful young engineers
                 who can perform well in varied professions. To develop a
                 strong fundamental base which enables students to explore
                 academic and collaborative interactions with industry,
@@ -71,6 +79,7 @@ function Home() {
 
         <div className="section">
           <div className="card three">
+            <div className="heading">Values</div>
             <div className="heading">Values</div>
             <div className="description">
               <p> The embryonic formation of the Department of Electronics and
@@ -100,4 +109,4 @@ export default Home;
     <h2>Electronics & Communication Engineering Students' Society</h2>
     <h4>LEARN.INNOVATE.COLLABORATE</h4>
   </div>
-</div> */
+</div> */}
