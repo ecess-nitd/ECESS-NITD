@@ -3,7 +3,7 @@
     src: url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
 }
 
-* {
+
 @font-face {
     font-family: roboto-slab;
     src: url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
@@ -19,7 +19,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
     background: #1d061a;
 }
 
@@ -316,9 +315,6 @@ body {
     height: 40vw;
     margin-bottom: 50px;
 }
-    height: 40vw;
-    margin-bottom: 50px;
-}
 
 .one {
     background: linear-gradient(rgba(97, 218, 251, 0.3),
@@ -326,8 +322,6 @@ body {
         url(../../images/mission2.jpg);
     background-size: 145%;
     background-repeat: repeat-y;
-    background-position: center;
-}
     background-position: center;
 }
 
@@ -459,9 +453,8 @@ body {
 .card:hover .description {
     opacity: 1;
 }
-}
 
-.card:hover .description>p {
+
 .card:hover .description>p {
     transform: translateY(-25px);
     color: bisque;

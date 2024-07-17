@@ -11,6 +11,8 @@ import 'remixicon/fonts/remixicon.css';
 import ScrollToTop from './components/ScrollToTop';
 import 'remixicon/fonts/remixicon.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import EventSection from './components/Events/EventSection';
+import EventDetail from './components/Events/EventDetails';
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -35,7 +37,7 @@ function App() {
             <Route exact path="/about" element={<AboutUs />} />
             <Route exact path="/team" element={<Team />} />
             <Route exact path="/faculty" element={<Faculty />} />
-            <Route exact path="/events" element={<Event />} />
+            <Route exact path="/events" element={<EventSection />} />
             <Route exact path='/events/:id' element={ <EventDetail />} />
           </Routes>
           <Footer />
