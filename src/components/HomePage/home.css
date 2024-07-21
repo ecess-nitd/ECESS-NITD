@@ -1,0 +1,541 @@
+@font-face {
+    font-family: roboto-slab;
+    src: url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.whole-website {
+    width: 100%;
+    overflow-x: clip;
+}
+
+.primary-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    position: relative;
+    top: 95px;
+    width: 100vw;
+    height: 110vh;
+    background-image: url('../../images/bg.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100vh;
+}
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 40px 0;
+    width: 80vw;
+}
+
+.container .box {
+    position: relative;
+    width: 60vw;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 30px;
+    transition: 0.5s;
+}
+
+.box .content {
+    position: relative;
+    padding: 15px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.container .box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50px;
+    width: 80%;
+    height: 100%;
+    background: #fff;
+    border-radius: 8px;
+    transform: skewX(15deg);
+    transition: 0.5s;
+}
+
+.container .box::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50px;
+    width: 50%;
+    height: 100%;
+    background: #fff;
+    border-radius: 8px;
+    transform: skewX(15deg);
+    transition: 0.5s;
+    filter: blur(30px);
+}
+
+.container .box:hover::before,
+.container .box:hover::after {
+    transform: skewX(0deg);
+    left: 20px;
+    width: calc(100% - 90px);
+}
+
+.container .box:nth-child(1)::before,
+.container .box:nth-child(1)::after {
+    background: linear-gradient(315deg, #00aeff, #ff00bb);
+}
+
+.container .box span {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 120%;
+    z-index: 50;
+    pointer-events: none;
+}
+
+.container .box span::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    opacity: 0;
+    transition: 0.5s;
+    animation: animate 2s ease-in-out infinite;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.container .box:hover span::before {
+    top: -50px;
+    left: 50px;
+    width: 100px;
+    height: 100px;
+    opacity: 1;
+}
+
+.container .box span::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    opacity: 0;
+    transition: 0.5s;
+    animation: animate 2s ease-in-out infinite;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    animation-delay: -1s;
+}
+
+.container .box:hover span::after {
+    bottom: -50px;
+    right: 100px;
+    width: 100px;
+    height: 100px;
+    opacity: 1;
+
+}
+
+@keyframes animate {
+    0% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+.container .box .content {
+    z-index: 1;
+    left: 0;
+    padding: 20px 40px;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+    position: relative;
+    transform: 0.5s;
+    transition: 0.5s;
+    color: #fff;
+}
+
+.container .box:hover .content {
+    left: -25px;
+    padding: 60px 40px;
+}
+
+.container .box .content h2 {
+    font-size: 2em;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.container .box .content p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    line-height: 1.4em;
+}
+
+.container .box .content a {
+    display: inline-block;
+    font-size: 1.1em;
+    color: #111;
+    background: #fff;
+    padding: 10px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 700;
+    margin-top: 5px;
+}
+
+.back {
+    position: absolute;
+    top: 20vh;
+    left: 32.5vw;
+    width: 35vw;
+    height: 20vw;
+    background: linear-gradient(rgba(255, 255, 255, .45), rgba(255, 255, 255, .45)), url('../../images/bg.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    filter: blur(2px);
+}
+
+.who-are-we {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 2vw;
+    width: 35vw;
+    height: 20vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding: 15px;
+    top: -100px;
+
+    >h1 {
+        margin: 15px;
+        color: #04d9ff;
+        font-family: "Bona Nova SC", serif;
+        font-weight: 600;
+        font-size: 3.5rem;
+        font-style: normal;
+        z-index: 100000;
+        filter: blur(0px);
+    }
+
+    >h2 {
+        width: 70%;
+        margin: 10px;
+        font-family: roboto-slab;
+        font-weight: 600;
+        font-size: 1.5rem;
+        color: rgba(0, 0, 0, 0.7);
+    }
+
+    >h4 {
+        margin-top: 10px;
+        font-family: "Bona Nova SC", serif;
+        font-weight: 400;
+        font-size: 1rem;
+        color: rgba(0, 0, 0, 0.7);
+    }
+}
+
+.secondary-section {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 25px 0px;
+}
+
+.section {
+    margin: 20px;
+    width: 30vw;
+    height: 40vw;
+    margin-bottom: 50px;
+}
+
+.one {
+    background: linear-gradient(rgba(97, 218, 251, 0.3),
+            rgba(97, 218, 251, 0.3)),
+        url(../../images/mission2.jpg);
+    background-size: 145%;
+    background-repeat: repeat-y;
+    background-position: center;
+}
+
+.two {
+    background: linear-gradient(rgba(97, 218, 251, 0.2),
+            rgba(97, 218, 251, 0.2)),
+        url(../../images/semiconductor.jpg);
+    background-size: 190%;
+    background-repeat: repeat-y;
+    background-position: center;
+}
+
+.three {
+    background: linear-gradient(rgba(97, 218, 251, 0.3),
+            rgba(97, 218, 251, 0.3)),
+        url(../../images/nitdgp1.png);
+    background-size: 190%;
+    background-repeat: repeat-y;
+    background-position: center;
+}
+
+.card {
+    position: relative;
+    width: 100%;
+    height: 25vw;
+    height: 25vw;
+    margin: 20px;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 100%;
+    align-items: center;
+    justify-items: center;
+    border-radius: 25px;
+    overflow: hidden;
+    transition: all 1.3s ease;
+}
+
+.heading {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 4vw;
+    font-weight: bold;
+    transition: transform 1.3s ease;
+    color: rgb(97, 218, 251);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 1;
+    justify-self: center;
+}
+
+.description {
+    font-family: roboto-slab;
+    font-weight: 300;
+    font-size: 1vw;
+    width: 100%;
+    text-align: center;
+    visibility: hidden;
+    transition: visibility 0.5s;
+}
+
+
+.description>p {
+    font-family: roboto-slab;
+    width: 70%;
+    color: white;
+    visibility: hidden;
+    transition: opacity 0.5s;
+}
+
+.card:hover{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 30% 70%;
+    align-items: center;
+    justify-items: center;
+}
+
+.card:hover .heading {
+    transition: transform 1s ease;
+    z-index: 5000;
+    transform: translateY(-8.5vw);
+    color: rgb(97, 218, 251);
+}
+
+.card:hover .description {
+    visibility: visible;
+}
+
+.card:hover .description>p {
+    align-self: center;
+    justify-self: center;
+    grid-area: 1/2/1/3;
+    transform: translateY(250px);
+    color: bisque;
+    visibility: visible;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .who-are-we {
+        >h2 {
+            width: 70vw;
+        }
+    }
+
+    .section {
+        width: 40vw;
+        display: flex;
+        align-items: center;
+        margin: 0px;
+        gap: 10px;
+    }
+
+    .card {
+        margin: 10px;
+    }
+
+    .description {
+        font-size: 0.97vw;
+    }
+
+    .description>p.vision-desc {
+        position: relative;
+        top: 30px;
+    }
+
+    .card:hover .heading {
+        transform: translateY(-7.2vw);
+        transition: transform 0.9s ease;
+    }
+
+    .card:hover .description>p {
+        transform: translateY(-3.5vw);
+    }
+}
+
+@media screen and (min-width: 425px) and (max-width: 786px) {
+    .secondary-section {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .section {
+        position: relative;
+        right: 20px;
+        width: 90vw;
+        height: 350px;
+        margin: 15px;
+    }
+
+    .card {
+        height: 350px;
+    }
+
+    .heading {
+        font-size: 10vw;
+    }
+
+    .description>p {
+        font-size: 15px;
+        width: 500px;
+    }
+
+    .card:hover .heading {
+        transform: translateY(-15vh);
+        transition: transform 0.9s ease;
+    }
+
+    .card:hover .description>p {
+        transform: translateY(-2vh);
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 425px) {
+    .secondary-section {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .section {
+        position: relative;
+        right: 20px;
+        width: 90vw;
+        height: 400px;
+        margin: 15px;
+    }
+
+    .card {
+        height: 400px;
+    }
+
+    .description>p {
+        font-size: 15px;
+        width: 300px;
+    }
+
+    .heading {
+        font-size: 10vw;
+    }
+
+    .card:hover .heading {
+        transform: translateY(-18vh);
+        transition: transform 0.9s ease;
+    }
+
+    .card:hover .description>p {
+        transform: translateY(-2vh);
+    }
+}
+
+
+/* >h1 {
+    position: relative;
+    top: 20px;
+    color: #04d9ff;
+    font-family: "Bona Nova SC", serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 3rem;
+}
+
+>h2 {
+    /* width: 70%; */
+/* margin: 10px;
+    font-family: roboto-slab;
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 2.5rem;
+}
+
+>h4 {
+    font-family: "Bona Nova SC", serif;
+    font-size: 1rem;
+    color: rgba(0, 0, 0, 0.7);
+} */

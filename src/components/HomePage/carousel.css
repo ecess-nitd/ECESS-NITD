@@ -1,0 +1,50 @@
+.image-accordion {
+  padding: 50px;
+  background-color: rgb(91, 90, 90);
+  display: flex;
+  overflow: hidden;
+  height: 800px;
+}
+
+.image-accordion-item {
+  margin: 10px;
+  border-radius: 15px;
+  flex: 1;
+  transition: flex 0.5s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.image-accordion-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.image-accordion-item .content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px;
+  text-align: center;
+  display: none;
+}
+
+.image-accordion-item:hover,
+.image-accordion-item.active {
+  flex: 5;
+}
+
+.image-accordion-item:hover .content,
+.image-accordion-item.active .content {
+  display: block;
+}
+
+.image-accordion-item:not(.active) {
+  flex: 1;
+}
