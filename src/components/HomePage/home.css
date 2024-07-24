@@ -7,6 +7,7 @@
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
+    font-family: roboto-slab;
 }
 
 .whole-website {
@@ -182,6 +183,34 @@
     transform: 0.5s;
     transition: 0.5s;
     color: #fff;
+
+    >h1 {
+        margin: 15px;
+        color: #04d9ff;
+        font-family: roboto-slab;
+        font-weight: 600;
+        font-size: 3.5rem;
+        font-style: normal;
+        z-index: 100000;
+        filter: blur(0px);
+    }
+
+    >h2 {
+        width: 70%;
+        margin: 10px;
+        font-family: roboto-slab;
+        font-weight: 600;
+        font-size: 1.5rem;
+        color: rgba(0, 0, 0, 0.7);
+    }
+
+    >h4 {
+        margin-top: 10px;
+        font-family: "Bona Nova SC", serif;
+        font-weight: 400;
+        font-size: 1rem;
+        color: rgba(0, 0, 0, 0.7);
+    }
 }
 
 .container .box:hover .content {
@@ -213,73 +242,22 @@
     margin-top: 5px;
 }
 
-.back {
-    position: absolute;
-    top: 20vh;
-    left: 32.5vw;
-    width: 35vw;
-    height: 20vw;
-    background: linear-gradient(rgba(255, 255, 255, .45), rgba(255, 255, 255, .45)), url('../../images/bg.jpg');
-    background-attachment: fixed;
-    background-size: cover;
-    filter: blur(2px);
-}
-
-.who-are-we {
-    background-color: rgba(0, 0, 0, 0.2);
-    border-radius: 2vw;
-    width: 35vw;
-    height: 20vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    padding: 15px;
-    top: -100px;
-
-    >h1 {
-        margin: 15px;
-        color: #04d9ff;
-        font-family: "Bona Nova SC", serif;
-        font-weight: 600;
-        font-size: 3.5rem;
-        font-style: normal;
-        z-index: 100000;
-        filter: blur(0px);
-    }
-
-    >h2 {
-        width: 70%;
-        margin: 10px;
-        font-family: roboto-slab;
-        font-weight: 600;
-        font-size: 1.5rem;
-        color: rgba(0, 0, 0, 0.7);
-    }
-
-    >h4 {
-        margin-top: 10px;
-        font-family: "Bona Nova SC", serif;
-        font-weight: 400;
-        font-size: 1rem;
-        color: rgba(0, 0, 0, 0.7);
-    }
-}
-
 .secondary-section {
-    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 20px;
     flex-wrap: wrap;
     margin: 25px 0px;
 }
 
 .section {
-    margin: 20px;
     width: 30vw;
-    height: 40vw;
+    height: 35vw;
     margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .one {
@@ -311,15 +289,14 @@
 
 .card {
     position: relative;
+    text-align: center;
     width: 100%;
-    height: 25vw;
-    height: 25vw;
+    height: 70%;
     margin: 20px;
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 100%;
+    display: flex;
     align-items: center;
-    justify-items: center;
+    justify-content: center;
+    flex-direction: column;
     border-radius: 25px;
     overflow: hidden;
     transition: all 1.3s ease;
@@ -329,149 +306,116 @@
     font-family: 'Times New Roman', Times, serif;
     font-size: 4vw;
     font-weight: bold;
-    transition: transform 1.3s ease;
     color: rgb(97, 218, 251);
     width: 100%;
-    height: 100%;
-    position: absolute;
     opacity: 1;
-    justify-self: center;
+    transition: transform 1.3s ease;
+    z-index: 1000;
+    margin: auto;
+    position: absolute;
+    top: 40%;
 }
 
 .description {
     font-family: roboto-slab;
     font-weight: 300;
     font-size: 1vw;
-    width: 100%;
+    width: 80%;
+    opacity: 0;
+    z-index: 1000;
+    margin-top: 4.3rem;
     text-align: center;
-    visibility: hidden;
-    transition: visibility 0.5s;
 }
 
-
-.description>p {
-    font-family: roboto-slab;
-    width: 70%;
-    color: white;
-    visibility: hidden;
-    transition: opacity 0.5s;
+.overlay {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
-.card:hover{
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 30% 70%;
-    align-items: center;
-    justify-items: center;
+.card:hover .overlay {
+    z-index: 500;
+    background-color: rgba(99, 190, 232, 0.567);
 }
 
 .card:hover .heading {
+    color: rgb(34, 32, 32);
+    transform: translateY(-7vw);
     transition: transform 1s ease;
-    z-index: 5000;
-    transform: translateY(-8.5vw);
-    color: rgb(97, 218, 251);
 }
 
 .card:hover .description {
-    visibility: visible;
-}
-
-.card:hover .description>p {
-    align-self: center;
-    justify-self: center;
-    grid-area: 1/2/1/3;
-    transform: translateY(250px);
     color: bisque;
-    visibility: visible;
+    opacity: 1;
+    transition: opacity 1s ease;
+
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-    .who-are-we {
-        >h2 {
-            width: 70vw;
-        }
-    }
-
     .section {
-        width: 40vw;
-        display: flex;
-        align-items: center;
         margin: 0px;
         gap: 10px;
     }
 
     .card {
-        margin: 10px;
+        margin: 0px;
     }
 
     .description {
-        font-size: 0.97vw;
-    }
-
-    .description>p.vision-desc {
-        position: relative;
-        top: 30px;
+        font-size: 1.1vw;
+        text-align: justify;
     }
 
     .card:hover .heading {
-        transform: translateY(-7.2vw);
+        transform: translateY(-7.8vw);
         transition: transform 0.9s ease;
-    }
-
-    .card:hover .description>p {
-        transform: translateY(-3.5vw);
     }
 }
 
 @media screen and (min-width: 425px) and (max-width: 786px) {
     .secondary-section {
         position: relative;
-        display: flex;
-        flex-direction: column;
         width: 100%;
     }
 
     .section {
-        position: relative;
-        right: 20px;
-        width: 90vw;
-        height: 350px;
-        margin: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 80vw;
+        height: 250px;
+        margin-top: 50px;
+        margin-bottom: 0px;
     }
 
     .card {
-        height: 350px;
+        height: 100%;
+        margin: 0px;
     }
 
     .heading {
-        font-size: 10vw;
+        font-size: 7vw;
+        position: relative;
+        top: 40%;
     }
 
-    .description>p {
-        font-size: 15px;
-        width: 500px;
+    .description {
+        position: relative;
+        top: 15px;
+        font-size: 2.3vw;
+        width: 80%;
     }
 
     .card:hover .heading {
-        transform: translateY(-15vh);
+        transform: translateY(-12vw);
         transition: transform 0.9s ease;
     }
 
-    .card:hover .description>p {
+    .card:hover .description {
         transform: translateY(-2vh);
     }
 }
@@ -482,23 +426,26 @@
         display: flex;
         flex-direction: column;
         width: 100%;
+        margin-top: 25px;
     }
 
     .section {
         position: relative;
-        right: 20px;
+        top: 20px;
         width: 90vw;
-        height: 400px;
-        margin: 15px;
+        height: 230px;
+        margin: 0px;
     }
 
     .card {
-        height: 400px;
+        height: 100%;
     }
 
-    .description>p {
-        font-size: 15px;
-        width: 300px;
+    .description {
+        text-align: center;
+        padding: 10px;
+        font-size: 2.5vw;
+        width: 80%;
     }
 
     .heading {
@@ -506,7 +453,7 @@
     }
 
     .card:hover .heading {
-        transform: translateY(-18vh);
+        transform: translateY(-15vw);
         transition: transform 0.9s ease;
     }
 
@@ -514,28 +461,3 @@
         transform: translateY(-2vh);
     }
 }
-
-
-/* >h1 {
-    position: relative;
-    top: 20px;
-    color: #04d9ff;
-    font-family: "Bona Nova SC", serif;
-    font-weight: 600;
-    font-style: normal;
-    font-size: 3rem;
-}
-
->h2 {
-    /* width: 70%; */
-/* margin: 10px;
-    font-family: roboto-slab;
-    color: rgba(0, 0, 0, 0.7);
-    font-size: 2.5rem;
-}
-
->h4 {
-    font-family: "Bona Nova SC", serif;
-    font-size: 1rem;
-    color: rgba(0, 0, 0, 0.7);
-} */
