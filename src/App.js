@@ -1,7 +1,6 @@
 import './App.css';
 import Footer from './components/Footer/Footer';
 import Home from './components/HomePage/Home';
-import AboutUs from './components/AboutusPage/AboutUs';
 import Team from './components/TeamPage/TeamSection';
 import Faculty from './components/FacultyPage/Faculty';
 import Navbar from './components/Navbar/Navbar';
@@ -34,7 +33,6 @@ function App() {
           <Navbar />
           <Routes>
             <Route exact path="/" element={<Home />} />
-            <Route exact path="/about" element={<AboutUs />} />
             <Route exact path="/team" element={<Team />} />
             <Route exact path="/faculty" element={<Faculty />} />
             <Route exact path="/events" element={<EventSection />} />
