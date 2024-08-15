@@ -1,7 +1,6 @@
 import './App.css';
 import Footer from './components/Footer/Footer';
 import Home from './components/HomePage/Home';
-import AboutUs from './components/AboutusPage/AboutUs';
 import Team from './components/TeamPage/TeamSection';
 import Faculty from './components/FacultyPage/Faculty';
 import Navbar from './components/Navbar/Navbar';

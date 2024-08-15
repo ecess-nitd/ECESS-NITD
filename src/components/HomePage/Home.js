@@ -40,57 +40,53 @@ function Home() {
       <div className="secondary-section">
         <div className="section" >
           <div className="card one">
+          <div className="overlay"></div>
             <div className="heading">Mission</div>
-            <div className="description mission-desc">
-              <p> To develop a community by the students of the Electronics and
-                Communication Department that will work towards the welfare of the
-                department and its students in general. To develop a strong alumni
-                network and involve them in conducting various seminars as well as
-                career guidance assistance via interaction sessions with the
-                students of Electronics and Communication Engineering. To
-                systematically access the computer laboratory of the department
-                for maximum utilization by the students and software that can be
-                made available to the students to hone their software skills and
-                perform necessary simulations.</p>
-            </div>
+            <p className="description "> To develop a community by the students of the Electronics and
+              Communication Department that will work towards the welfare of the
+              department and its students in general. To develop a strong alumni
+              network and involve them in conducting various seminars as well as
+              career guidance assistance via interaction sessions with the
+              students of Electronics and Communication Engineering. To
+              systematically access the computer laboratory of the department
+              for maximum utilization by the students and software that can be
+              made available to the students to hone their software skills and
+              perform necessary simulations.</p>
           </div>
         </div>
 
         <div className="section">
           <div className="card two">
-              <div className="heading">Vision</div>
-              <div className="description ">
-                <p className="vision-desc"> To produce highly competent and resourceful young engineers
-                  who can perform well in varied professions. To develop a
-                  strong fundamental base which enables students to explore
-                  academic and collaborative interactions with industry,
-                  academia and research organizations. To develop excellent
-                  research facilities</p>
-              </div>
-            
+          <div className="overlay"></div>
+            <div className="heading">Vision</div>
+            <p className="description"> To produce highly competent and resourceful young engineers
+              who can perform well in varied professions. To develop a
+              strong fundamental base which enables students to explore
+              academic and collaborative interactions with industry,
+              academia and research organizations. To develop excellent
+              research facilities</p>
           </div>
         </div>
 
         <div className="section">
           <div className="card three">
+            <div className="overlay"></div>
             <div className="heading">Values</div>
-            <div className="description">
-              <p> The embryonic formation of the Department of Electronics and
-                Communication Engineering was in the year 1983 with the
-                introduction of an undergraduate course. Situated amidst a lush
-                green campus with teak plantations, the Department, over time, has
-                grown in several dimensions and provides a magnetic ambience in
-                teaching and learning. The faculties are engaged in research in
-                diverse topics focussing on Telecommunication, Antenna and
-                Microwave, Microelectronics and VLSI, Signal and Image processing
-                and Computational Systems Biology.</p>
-            </div>
+            <p className="description">The embryonic formation of the Department of Electronics and
+              Communication Engineering was in the year 1983 with the
+              introduction of an undergraduate course. Situated amidst a lush
+              green campus with teak plantations, the Department, over time, has
+              grown in several dimensions and provides a magnetic ambience in
+              teaching and learning. The faculties are engaged in research in
+              diverse topics focussing on Telecommunication, Antenna and
+              Microwave, Microelectronics and VLSI, Signal and Image processing
+              and Computational Systems Biology.</p>
           </div>
         </div>
       </div>
 
-        {/* <ImageAccordion items={items} /> */}
-        <Carousel images={images} />
+      {/* <ImageAccordion items={items} /> */}
+      <Carousel images={images} />
     </div>
   );
 }
