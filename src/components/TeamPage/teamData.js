@@ -155,7 +155,7 @@ export const PrefinalTeamData =[
     {
         image: Animesh,
         name: "Animesh Punetha",
-        position: "Senior Co-ordinator",
+        position: "Junior Co-ordinator",
         facebook: "#",
         linkedin: "#",
         instagram: "#",
@@ -163,7 +163,7 @@ export const PrefinalTeamData =[
     {
         image: Anisha,
         name: "Anisha Kumari",
-        position: "Senior Co-ordinator",
+        position: "Junior Co-ordinator",
         facebook: "#",
         linkedin: "#",
         instagram: "#",
@@ -171,7 +171,7 @@ export const PrefinalTeamData =[
     {
         image: Dhritishree,
         name: "Dhritishree Saha",
-        position: "Senior Co-ordinator",
+        position: "Junior Co-ordinator",
         facebook: "#",
         linkedin: "#",
         instagram: "#",
@@ -179,7 +179,7 @@ export const PrefinalTeamData =[
     {
         image: Jayesh,
         name: "Jayesh Toshniwal",
-        position: "Senior Co-ordinator",
+        position: "Junior Co-ordinator",
         facebook: "#",
         linkedin: "#",
         instagram: "#",
@@ -187,7 +187,7 @@ export const PrefinalTeamData =[
     {
         image: Manas,
         name: "Manas Mahata",
-        position:"Senior Co-ordinator",
+        position:"Junior Co-ordinator",
         facebook: "#",
         linkedin: "#",
         instagram: "#",
@@ -195,7 +195,7 @@ export const PrefinalTeamData =[
     {
         image: Asif,
         name: "Mohammed Asif",
-        position: "Senior Co-ordinator",
+        position: "Junior Co-ordinator",
         facebook: "#",
         linkedin: "#",
         instagram: "#",
@@ -203,7 +203,7 @@ export const PrefinalTeamData =[
     {
         image: Alex,
         name: "R Charisma Alex",
-        position: "Senior Co-ordinator",
+        position: "Junior Co-ordinator",
         facebook: "#",
         linkedin: "#",
         instagram: "#",
@@ -211,7 +211,7 @@ export const PrefinalTeamData =[
     {
         image: Sagnik,
         name: "Sagnik Dutta",
-        position: "Senior Co-ordinator",
+        position: "Junior Co-ordinator",
         facebook: "#",
         linkedin: "#",
         instagram: "#",
@@ -220,7 +220,7 @@ export const PrefinalTeamData =[
     {
         image: Sarmistha,
         name: "Sarmistha Naskar",
-        position: "Senior Co-ordinator",
+        position: "Junior Co-ordinator",
         facebook: "#",
         linkedin: "#",
         instagram: "#",
@@ -228,7 +228,7 @@ export const PrefinalTeamData =[
     {
         image: Soumyadeep,
         name: "Soumyadeep Chakraborty",
-        position: "Senior Co-ordinator",
+        position: "Junior Co-ordinator",
         facebook: "#",
         linkedin: "#",
         instagram: "#",
@@ -236,7 +236,7 @@ export const PrefinalTeamData =[
     {
         image: Tanushri,
         name: "Tanushri Ghosh",
-        position: "Senior Co-ordinator",
+        position: "Junior Co-ordinator",
         facebook: "#",
         linkedin: "#",
         instagram: "#",
@@ -244,7 +244,7 @@ export const PrefinalTeamData =[
     {
         image: Tina,
         name: "Tina Ghosh",
-        position: "Senior Co-ordinator",
+        position: "Junior Co-ordinator",
         facebook: "#",
         linkedin: "#",
         instagram: "#",
@@ -252,7 +252,7 @@ export const PrefinalTeamData =[
     {
         image: Vipin,
         name: "Vipin Sharma",
-        position: "Senior Co-ordinator",
+        position: "Junior Co-ordinator",
         facebook: "#",
         linkedin: "#",
         instagram: "#",
