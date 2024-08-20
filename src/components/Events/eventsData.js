@@ -130,7 +130,7 @@ const eventsData = [
         modaldescription:`Embedded systems are the hidden heroes powering countless devices we rely on daily, from medical equipment to home appliances. At Electronics and Communication Engineering Student's Society (ECESS), NIT Durgapur, we're passionate about demystifying these technologies. Beyond the basics of microprocessors and sensors, our workshop delves into real-world applications, teaching you how to simulate and design circuits that mirror what's used in today's tech landscape. Imagine gaining hands-on experience that translates directly into understanding how your favorite gadgets function. Whether you're considering a career in electronics or just eager to explore, our workshop offers a gateway to practical knowledge and skills. Join us to uncover the secrets of embedded systems—your journey starts here!`,
         date: `13th & 14th March, 2021`,
         time: `5pm`,
-        Mode: `Online`
+        venue: `Online`
     }
 ];
 

@@ -1,29 +1,6 @@
 import React from "react";
 import "./Faculty.css";
 
-import durbadalmondal from "../../asserts/dm.png";
-import anup from "../../asserts/anup.png";
-import asish from "../../asserts/asish.png";
-import akd from "../../asserts/akd.png";
-import aniruddha from "../../asserts/aniruddha-chandra.png";
-import director from "../../asserts/director.png";
-import gautam from "../../asserts/gautam.png";
-import hemanth from "../../asserts/hemanth.png";
-import mahapatra from "../../asserts/mahapatra.png";
-import nilanjanC from "../../asserts/nilanjan-chattaraj.png";
-import nilanjan from "../../asserts/nilanjan.png";
-import rajashree from "../../asserts/rajashree.png";
-import rk from "../../asserts/rk.png";
-import rowdra from "../../asserts/rowdra.png";
-import sdr from "../../asserts/sdr.png";
-import skm from "../../asserts/skm.png";
-import suman from "../../asserts/suman.png";
-import swapna from "../../asserts/swapna.png";
-import tapas from "../../asserts/tapas.png";
-import sumit from "../../asserts/sumit.png";
-import majumder from "../../asserts/majumder.png";
-import bm from "../../asserts/bm.png";
-
 function Faculty() {
   return (
     <div className="rprofessors">
@@ -37,7 +14,7 @@ function Faculty() {
           <div className="lines"></div>
           <div className="imgBx">
             {" "}
-            <img className="each-prof" src={director} alt="" loading="lazy" />
+            <img className="each-prof" src='https://i.imgur.com/LhNZkkv.png' alt="" loading="lazy" />
           </div>
 
           <div className="contxt">
@@ -87,7 +64,7 @@ function Faculty() {
           <div className="imgBx">
             <img
               className="each-prof"
-              src={sdr}
+              src='https://i.imgur.com/aBnmCAb.png'
               alt="Dr.Sanjay Dhar Roy"
               loading="lazy"
             />
@@ -144,7 +121,7 @@ function Faculty() {
           <div className="imgBx">
             <img
               className="each-prof"
-              src={durbadalmondal}
+              src='https://i.imgur.com/Xy90jaZ.png'
               alt="Durbadal Mandal"
               loading="lazy"
             />
@@ -201,7 +178,7 @@ function Faculty() {
           <div className="imgBx">
             <img
               className="each-prof"
-              src={aniruddha}
+              src='https://i.imgur.com/05ym8cp.png'
               alt="Aniruddha Chandra"
               loading="lazy"
             />
@@ -264,7 +241,7 @@ Free space optical communication.
           <div className="imgBx">
             <img
               className="each-prof"
-              src={anup}
+              src='https://i.imgur.com/aHP4o4S.png'
               alt="Anup Kumar Bhattacharjee"
               loading="lazy"
             />
@@ -320,7 +297,7 @@ Free space optical communication.
           <div className="imgBx">
             <img
               className="each-prof"
-              src={asish}
+              src='https://i.imgur.com/8JyRmZK.png'
               alt="Ashis Kumar Mal"
               loading="lazy"
             />
@@ -380,7 +357,7 @@ Integer Sequences .</p> */}
           <div className="imgBx">
             <img
               className="each-prof"
-              src={majumder}
+              src='https://i.imgur.com/6cODirx.png'
               alt="Aurpan Majumder"
               loading="lazy"
             />
@@ -437,7 +414,7 @@ Integer Sequences .</p> */}
           <div className="imgBx">
             <img
               className="each-prof"
-              src={bm}
+              src='https://i.imgur.com/GKenoNV.png'
               alt="Dr.Bansibadan Maji"
               loading="lazy"
             />
@@ -494,7 +471,7 @@ Integer Sequences .</p> */}
           <div className="imgBx">
             <img
               className="each-prof"
-              src={gautam}
+              src='https://i.imgur.com/m6J2hP0.png'
               alt="Gautam Kumar Mahanti"
               loading="lazy"
             />
@@ -552,7 +529,7 @@ Integer Sequences .</p> */}
           <div className="imgBx">
             <img
               className="each-prof"
-              src={hemanth}
+              src='https://i.imgur.com/QbC1hau.png'
               alt=" Hemanta Kumar Mondal"
               loading="lazy"
             />
@@ -609,7 +586,7 @@ Integer Sequences .</p> */}
           <div className="imgBx">
             <img
               className="each-prof"
-              src={nilanjan}
+              src='https://i.imgur.com/dPtt0wK.png'
               alt="Nilanjan Biswas "
               loading="lazy"
             />
@@ -669,7 +646,7 @@ Scheduling </p> */}
           <div className="imgBx">
             <img
               className="each-prof"
-              src={nilanjanC}
+              src='https://i.imgur.com/GudKHW2.png'
               alt=" Nilanjan Chattaraj"
               loading="lazy"
             />
@@ -734,7 +711,7 @@ Embedded AI in Robotics</p> */}
           <div className="imgBx">
             <img
               className="each-prof"
-              src={rajashree}
+              src='https://i.imgur.com/ZZpd2iU.png'
               alt=" Rajashree Das"
               loading="lazy"
             />
@@ -791,7 +768,7 @@ Embedded AI in Robotics</p> */}
           <div className="imgBx">
             <img
               className="each-prof"
-              src={mahapatra}
+              src='https://i.imgur.com/RnVeKYP.png'
               alt="rajat Mahapatra"
               loading="lazy"
             />
@@ -847,7 +824,7 @@ Embedded AI in Robotics</p> */}
         <div className="rprof-card">
           <div className="lines"></div>
           <div className="imgBx">
-            <img className="each-prof" src={rk} alt="Rajib Kar" />
+            <img className="each-prof" src='https://i.imgur.com/6z7Qxk6.png' alt="Rajib Kar" />
           </div>
 
           <div className="contxt">
@@ -901,7 +878,7 @@ Embedded AI in Robotics</p> */}
           <div className="imgBx">
             <img
               className="each-prof"
-              src={rowdra}
+              src='https://i.imgur.com/bA7BAnB.png'
               alt=" Rowdra Ghatak"
               loading="lazy"
             />
@@ -960,7 +937,7 @@ Embedded AI in Robotics</p> */}
           <div className="imgBx">
             <img
               className="each-prof"
-              src={swapna}
+              src='https://i.imgur.com/kiU8f7n.png'
               alt="Sapana Ranwa"
               loading="lazy"
             />
@@ -1018,7 +995,7 @@ Embedded AI in Robotics</p> */}
           <div className="imgBx">
             <img
               className="each-prof"
-              src={skm}
+              src='https://i.imgur.com/mrkckIb.png'
               alt="Sujit kr.Mandal"
               loading="lazy"
             />
@@ -1076,7 +1053,7 @@ Embedded AI in Robotics</p> */}
           <div className="imgBx">
             <img
               className="each-prof"
-              src={suman}
+              src='https://i.imgur.com/hZQBjWH.png'
               alt=" Suman Samui"
               loading="lazy"
             />
@@ -1138,7 +1115,7 @@ Embedded Machine Learning . </p> */}
           <div className="imgBx">
             <img
               className="each-prof"
-              src={sumit}
+              src='https://i.imgur.com/fI5V2mF.png'
               alt="Sumit Kundu"
               loading="lazy"
             />
@@ -1198,7 +1175,7 @@ Embedded Machine Learning . </p> */}
           <div className="imgBx">
             <img
               className="each-prof"
-              src={tapas}
+              src='https://i.imgur.com/Rd4IJ9U.png'
               alt="Tapas Sadhukhan"
               loading="lazy"
             />
