@@ -1,14 +1,3 @@
-import exordium from './resources/exordium.jpg';
-import vlsi23 from './resources/vlsi23.jpg';
-import techtalk from './resources/techtalk.jpg'
-import alumnitalk from './resources/alumnitalk.jpg'
-import invitedtalk from './resources/invitedtalk.jpg'
-import pcb from './resources/pcb design.jpg'
-import signals from './resources/signalsdecoded.png'
-import vlsi from './resources/vlsi.jpg'
-import placement from './resources/placementtalks.jpg'
-import embedded from './resources/embedded.jpg'
-
 const eventsData = [
     {
         id: 0,

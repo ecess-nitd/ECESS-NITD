@@ -58,13 +58,6 @@
   margin-left: 2rem;
   color: #ed5648;
 }
-.col a {
-  transform: translateY(0px);
-  transition: 0.5s;
-}
-.col a :hover {
-  transform: translateY(-10px);
-}
 
 .copyRight {
   display: flex;
@@ -149,6 +142,9 @@ hr {
   .footer-cols {
     position: relative;
     bottom: 22px;
+  }
+  .col .logo{
+    display: flex;
   }
   hr {
     position: absolute;

@@ -1,6 +1,6 @@
 import React from "react";
 import "./Footer.css";
-import logo from "./ecess-logo.png";
+import { Link } from 'react-router-dom';
 
 // import {
 //   FaMailBulk,
@@ -15,15 +15,10 @@ function Footer() {
       <div className="footer-cols">
         <div className="col">
           <div className="logo">
-            <img src={logo} />
+            <Link to='/'>
+              <img src='https://i.imgur.com/Lg3kv0j.png' alt="ECESS Logo" />
+            </Link>
           </div>
-          {/* <ul>
-            <li>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis,
-              placeat laboriosam! Explicabo numquam commodi quibusdam non earum
-              dolores{" "}
-            </li>
-          </ul> */}
         </div>
 
         <div className="col">
