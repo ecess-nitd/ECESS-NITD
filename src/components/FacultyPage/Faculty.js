@@ -27,7 +27,11 @@ import bm from "../../asserts/bm.png";
 function Faculty() {
   return (
     <div className="rprofessors">
-      <div className="profheading">Our Faculty</div>
+      <div class="heading-faculty">
+        <h1>Our Faculty</h1>
+        <div class="grey-line-faculty"></div>
+        <div class="coloured-line-faculty"></div>
+      </div>
       <div className="rall-prof">
         <div className="rprof-card">
           <div className="lines"></div>

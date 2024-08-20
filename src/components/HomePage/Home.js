@@ -23,7 +23,6 @@ function Home() {
 
   return (
     <div className="whole-website">
-
       <div className="primary-section">
         <div className="container">
           <div class="box">

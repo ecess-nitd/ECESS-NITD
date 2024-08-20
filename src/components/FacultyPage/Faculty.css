@@ -1,25 +1,49 @@
 .rprofessors {
+  padding-top: 8rem;
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
 }
 .rall-prof {
+  padding-top: 5rem;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 6rem;
   margin: 55px 45px 45px;
 }
-.profheading {
-  color: cadetblue;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  font-size: 24px;
-  margin-top: 150px;
-  margin-bottom: 20px;
-  padding-left: 3px;
-  border-left: 6px solid sandybrown;
+
+.heading-faculty{
+  display: contents;
+  justify-content: center;
+  align-items: center;
 }
+
+h1{
+  text-align: center;
+  color: rgb(16, 191, 197);
+  font-size: 55px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.coloured-line-faculty {
+  text-align: center;
+  border-top: rgb(16, 191, 197) 3px solid;
+  width: 45px;
+  margin-left: calc(50% - 15px);
+  margin-top: -2.5px;
+}
+
+.grey-line-faculty {
+  text-align: center;
+  border-top: #ddd 1px solid;
+  height: 1px;
+  width: 120px;
+  margin-left: calc(50% - 55px);
+  z-index: -1;
+}
+
 .each-prof {
   width: 500px;
   object-fit: contain;

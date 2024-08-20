@@ -1,4 +1,3 @@
-//eventsData.js
 import exordium from './resources/exordium.jpg';
 import vlsi23 from './resources/vlsi23.jpg';
 import techtalk from './resources/techtalk.jpg'
@@ -13,7 +12,7 @@ import embedded from './resources/embedded.jpg'
 const eventsData = [
     {
         id: 0,
-        image: exordium,
+        image: 'https://i.imgur.com/oLrJAu0.jpeg',
         title: 'Exordium',
         description:`This is an exclusive introductory event for first-year students in the Electronics and Communication 
                     Engineering (ECE) department, designed to showcase the department's opportunities and innovations. 
@@ -26,7 +25,7 @@ const eventsData = [
     },
     {
         id: 1,
-        image: vlsi23,
+        image: 'https://i.imgur.com/yhJ5Z0x.jpeg',
         title: 'VLSI Workshop',
         description:`ECESS, NIT Durgapur is organizing a 4-day VLSI (Very Large Scale Integration) workshop that requires 
                      no prior knowledge. This workshop offers a unique opportunity to learn about the technology that 
@@ -39,7 +38,7 @@ const eventsData = [
     },    
     {
         id: 2,
-        image: techtalk,
+        image: 'https://i.imgur.com/xWTO9hf.jpeg',
         title: 'Tech Talk',
         description:`The talkshow featuring Harsh Dokania, an accomplished alumnus of NIT Durgapur and current Qualcomm professional,
                     offers insights into placement, corporate life, post-college experiences for Electronics and Communication students 
@@ -51,7 +50,7 @@ const eventsData = [
     },
     {
         id: 3,
-        image: alumnitalk,
+        image: 'https://i.imgur.com/jLKspxt.jpeg',
         title: 'Alumni Talkshow',
         description:`Talkshow featuring Mr. Sai Vara Prasad Bolloju, a distinguished alumnus currently employed at Qualcomm. The event provided 
                     students with insights into building a successful career in the semiconductor industry and help them network with a professional 
@@ -63,7 +62,7 @@ const eventsData = [
     },
     {
         id: 4,
-        image: invitedtalk,
+        image: 'https://i.imgur.com/BRi3oMq.jpeg',
         title: 'Invited Talk',
         description:`A talkshow by Dr. Karan Nathwani, an expert in speech processing, has experience working in France, UK and India on speech 
                     enhancement, recognition and underwater signal processing. on the topic of "Speech Intelligibility Improvement in Realistic 
@@ -75,7 +74,7 @@ const eventsData = [
     },
     {
         id: 5,
-        image: pcb,
+        image: 'https://i.imgur.com/1hMJMFX.jpeg',
         title: 'PCB Design Workshop',
         description:`A two-day workshop focused on Printed Circuit Board design. It aims to teach participants about the various components of a 
                     PCB board, how to simulate circuits, how to convert those simulations into a PCB layout using EDA tools. This hands-on 
@@ -87,7 +86,7 @@ const eventsData = [
     },
     {
         id: 6,
-        image: signals,
+        image: 'https://i.imgur.com/cRLtPvh.png',
         title: 'Signals Decoded',
         description:`A workshop and seminar focusing on Signal Processing using MATLAB, along with an exclusive session on the Emergence of Graphs 
                     and Natural Language Processing (NLP). Participants will learn how to utilize MATLAB, and provide in-depth knowledge and practical 
@@ -99,7 +98,7 @@ const eventsData = [
     },
     {
         id: 7,
-        image: vlsi,
+        image: 'https://i.imgur.com/7j7d8aB.jpeg',
         title: 'VLSI Workshop',
         description:`A workshop  designed to introduce participants to the fundamental concepts of Very-Large-Scale Integration (VLSI) and Digital Hardware 
                     Design, with a focus on RTL (Register Transfer Level) and Verilog. It is ideal for enthusiasts looking to delve into the field of VLSI 
@@ -111,7 +110,7 @@ const eventsData = [
     },
     {
         id: 8,
-        image: placement,
+        image: 'https://i.imgur.com/1ifl3fy.jpeg',
         title: 'Placement Talk',
         description:`This event offers comprehensive insights into the placement process, covering eligibility criteria, required skills, an overview of 
                     participating companies, and details about offered salaries. Participants will gain valuable information to enhance their readiness and 
@@ -123,7 +122,7 @@ const eventsData = [
     },
     {
         id: 9,
-        image: embedded,
+        image: 'https://i.imgur.com/WwxWzgJ.jpeg',
         title: 'Embedded Systems Workshop',
         description:`It provided a comprehensive introduction to embedded systems,where  Participants will learn about microprocessors, microcontrollers, 
                     sensors, and their practical applications. This includes hands-on experience using simulation software to design, simulate, and prototype 

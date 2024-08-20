@@ -21,7 +21,7 @@
     justify-content: center;
     flex-direction: row;
     position: relative;
-    top: 95px;
+    /* top: 95px; */
     width: 100vw;
     height: 110vh;
     background-image: url('../../images/bg.jpg');

@@ -33,7 +33,6 @@ function App() {
           <Navbar />
           <Routes>
             <Route exact path="/" element={<Home />} />
-            {/* <Route exact path="/about" element={<AboutUs />} /> */}
             <Route exact path="/team" element={<Team />} />
             <Route exact path="/faculty" element={<Faculty />} />
             <Route exact path="/events" element={<EventSection />} />
