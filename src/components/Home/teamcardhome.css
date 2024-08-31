@@ -1,0 +1,108 @@
+.card-teamhome {
+    width: 250px;
+    height: 320px;
+    background: rgba(158, 158, 158, 0.1);
+    border-radius: 10px;
+    border-top: 1px solid rgba(37, 37, 37, 0.5);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.img-bx-teamhome {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    transform: translateY(5px) scale(0.5);
+    transform-origin: top;
+}
+
+.img-bx-teamhome img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.content-teamhome {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-bottom: 100px;
+}
+
+.content-teamhome .detail-teamhome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.content-teamhome .detail-teamhome h2 {
+    color: #fffefe;
+    font-size: 1.2em;
+    font-weight: bolder;
+}
+
+.content-teamhome .detail-teamhome h2 span {
+    font-size: 1em;
+    color: rgb(16, 191, 197);
+    font-weight: bold;
+}
+
+.sci-teamhome {
+    position: relative;
+    display: flex;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.sci-teamhome li {
+    list-style: none;
+    margin: 8px;
+}
+
+.sci-teamhome li a {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: transparent;
+    font-size: 1.5em;
+    color: #fefefe;
+    text-decoration: none;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    transition: 0.5s;
+}
+
+.sci-teamhome li a:hover {
+    background: rgb(16, 191, 197);
+    color: #fff;
+}
+
+@media (max-width: 600px) {
+  .card-teamhome {
+      width: 200px;
+      height: 290px;
+  }
+  .content-teamhome .detail-teamhome h2 {
+    font-size: 0.8em;
+  }
+  .sci-teamhome li a {
+    width: 30px;
+    height: 30px;
+    font-size: 0.8em;
+  }
+}

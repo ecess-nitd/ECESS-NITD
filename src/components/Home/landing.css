@@ -1,0 +1,525 @@
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+.hero-section {
+    background-image: url('/public/herosection.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+.heading-1{
+    font-size: 3rem;
+    font-weight: bold;
+    color: white
+}
+  
+.heading-2{
+    font-size: 3rem;
+    font-weight: bold;
+    color: rgb(16, 191, 197);
+}
+
+@media (max-width: 768px) {
+  .heading-1, .heading-2 {
+      font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .heading-1, .heading-2 {
+      font-size: 1.8rem;
+  }
+}
+
+.arrow-container{
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 25px;
+    left: 0;
+    right: 0;
+}
+  
+.arrow-1{
+    width: 80px;
+    height: 80px;
+    background: rgb(16, 191, 197);;
+    opacity: 0.5;
+    border-radius: 50%;
+    position: absolute;
+}
+  
+.arrow-2{
+    width: 60px;
+    height: 60px;
+    background: #00BCD4;
+    border-radius: 50%;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 1;
+    display: table;
+}
+  
+.arrow-2:before{
+    width: 52px;
+    height: 52px;
+    content: "";
+    border: 2px solid #006064;
+    border-radius: 50%;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+}
+  
+.arrow-2 i.fa{
+    font-size: 30px;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    color: #006064;
+}
+
+.about-us-section{
+  background-image: url('/public/eventwhitehome.jpg');
+  background-size: cover;
+  image-resolution: high;
+  background-position: center;
+  padding: 50px 20px;
+}
+
+.about-us-section {
+    background-color: rgb(253, 253, 252);
+    padding: 80px 60px;
+    align-items: center;
+    text-align: center;
+}
+  
+.section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+  
+.section-title .title1 {
+    color: rgb(0, 0, 0); 
+    /* border-bottom: 5px solid rgb(16, 191, 197);
+    border-radius: 1.5px 1.5px 1.5px 1.5px; */
+    padding-bottom: 5px;
+  }
+
+  .section-title .title2 {
+    color: rgb(16, 191, 197);
+    /* border-bottom: 5px solid black;
+    border-radius: 1.5px 1.5px 1.5px 1.5px; */
+    padding-bottom: 5px;
+  }
+  
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+    margin-top: 60px;
+}
+  
+@media (max-width: 1200px) {
+  .content {
+      flex-direction: column;
+      gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .column {
+      max-width: 100%;
+  }
+}
+
+.column {
+    max-width: 500px;
+    text-align: left;
+}
+  
+.column h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+  
+.column h2 span {
+    color: rgb(16, 191, 197);
+}
+  
+  .column p, .column ul {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  .column ul {
+    list-style-type: disc;
+    padding-left: 30px;
+  }
+  
+  .column ul li {
+    margin-bottom: 5px;
+  }
+
+.event-home-section {
+  background-image: url('/public/eventhomesection.jpg');
+  background-size: cover;
+  image-resolution: high;
+  background-position: center;
+  padding: 60px 80px;
+}
+
+
+.team-home-section {
+  background-image: url('/public/teamsection.jpg');
+  background-size: cover;
+  image-resolution: high;
+  background-position: center;
+  padding: 50px 80px;
+}
+
+.gallery{
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 19px;
+}
+
+.event-home-image {
+	width: 200px;
+	height: 200px;
+	display: block;
+	border-radius: 10px;
+}
+
+.card-event-home {
+	width: 240px;
+  align-items: center;
+	background-color: #FFF;
+	box-shadow: 0 0 0 1px rgba(#000, .05), 0 20px 50px 0 rgba(#000, .1);
+	border-radius: 15px;
+	overflow: hidden;
+	padding: 1.25rem;
+	position: relative;
+	transition: .15s ease-in;
+}
+
+.card-event-home::hover{
+  box-shadow: 0 0 0 2px #16C79A, 0 10px 60px 0 rgba(#000, .1);
+}
+
+.card-image {
+	border-radius: 15px;
+	overflow: hidden;
+}
+
+.event-card-header {
+	margin-top: 1rem;
+	display: flex;
+	align-items: center;
+  text-align: center;
+	justify-content: space-between;
+	p {
+    text-transform: capitalize;
+		font-weight: bold;
+		font-size: 1rem;
+		line-height: 1.25;
+		padding-right: 1rem;
+		text-decoration: none;
+		color: inherit;
+		will-change: transform;
+		&:after {
+			content: "";
+			position: absolute;
+			left: 0;
+			top: 0;
+			right: 0;
+			bottom: 0;
+		}
+	}
+}
+
+.section-title-team {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 80px;
+}
+
+.section-title-team .title1 {
+  color: rgb(255, 255, 255); 
+  /* border-bottom: 5px solid rgb(16, 191, 197);
+  border-radius: 1.5px 1.5px 1.5px 1.5px; */
+  padding-bottom: 5px;
+}
+
+.section-title-team .title2 {
+  color: rgb(16, 191, 197);
+  /* border-bottom: 5px solid rgb(255, 255, 255);
+  border-radius: 1.5px 1.5px 1.5px 1.5px; */
+  padding-bottom: 5px;
+}
+
+.slider-card-container {
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.slick-slide {
+    padding: 0 5px; 
+}
+
+@media (max-width: 1200px) {
+  .slick-slide {
+    padding: 0 30px; 
+  }
+}
+
+@media (max-width: 1000px) {
+  .slick-slide {
+    padding: 0 50px; 
+  }
+}
+
+@media (max-width: 800px) {
+  .slick-slide {
+    padding: 0 50px; 
+  }
+}
+
+
+.type--A{
+  --line_color : #fffefe ;
+  --back_color : #b9b9b9  ;
+}
+.button{
+    position : relative ;
+    z-index : 0 ;
+    width : 240px ;
+    height : 56px ;
+    text-decoration : none ;
+    font-size : 14px ; 
+    font-weight : bold ;
+    color : var(--line_color) ;
+    letter-spacing : 2px ;
+    transition : all .3s ease ;
+}
+.button__text{
+    display : flex ;
+    justify-content : center ;
+    align-items : center ;
+    width : 100% ;
+    height : 100% ;
+}
+.button::before,
+.button::after,
+.button__text::before,
+.button__text::after{
+    content : '' ;
+    position : absolute ;
+    height : 3px ;
+    border-radius : 2px ;
+    background : var(--line_color) ;
+    transition : all .5s ease ;
+}
+.button::before{
+    top : 0 ;
+    left : 54px ;
+    width : calc( 100% - 56px * 2 - 16px ) ;
+}
+.button::after{
+    top : 0 ;
+    right : 54px ;
+    width : 8px ;
+}
+.button__text::before{
+    bottom : 0 ;
+    right : 54px ;
+    width : calc( 100% - 56px * 2 - 16px ) ;
+}
+.button__text::after{
+    bottom : 0 ;
+    left : 54px ;
+    width : 8px ;
+}
+.button__line{
+    position : absolute ;
+    top : 0 ;
+    width : 56px ;
+    height : 100% ;
+    overflow : hidden ;
+}
+.button__line::before{
+    content : '' ;
+    position : absolute ;
+    top : 0 ;
+    width : 150% ;
+    height : 100% ;
+    box-sizing : border-box ;
+    border-radius : 300px ;
+    border : solid 3px var(--line_color) ;
+}
+.button__line:nth-child(1),
+.button__line:nth-child(1)::before{
+    left : 0 ;
+}
+.button__line:nth-child(2),
+.button__line:nth-child(2)::before{
+    right : 0 ;
+}
+.button:hover{
+    letter-spacing : 6px ;
+}
+.button:hover::before,
+.button:hover .button__text::before{
+    width : 8px ;
+}
+.button:hover::after,
+.button:hover .button__text::after{
+    width : calc( 100% - 56px * 2 - 16px ) ;
+}
+.button__drow1,
+.button__drow2{
+    position : absolute ;
+    z-index : -1 ;
+    border-radius : 16px ;
+    transform-origin : 16px 16px ;
+}
+.button__drow1{
+    top : -16px ;
+    left : 40px ;
+    width : 32px ;
+    height : 0;
+    transform : rotate( 30deg ) ;
+}
+.button__drow2{
+    top : 44px ;
+    left : 77px ;
+    width : 32px ;
+    height : 0 ;
+    transform : rotate(-127deg ) ;
+}
+.button__drow1::before,
+.button__drow1::after,
+.button__drow2::before,
+.button__drow2::after{
+    content : '' ;
+    position : absolute ;
+}
+.button__drow1::before{
+    bottom : 0 ;
+    left : 0 ;
+    width : 0 ;
+    height : 32px ;
+    border-radius : 16px ;
+    transform-origin : 16px 16px ;
+    transform : rotate( -60deg ) ;
+}
+.button__drow1::after{
+    top : -10px ;
+    left : 45px ;
+    width : 0 ;
+    height : 32px ;
+    border-radius : 16px ;
+    transform-origin : 16px 16px ;
+    transform : rotate( 69deg ) ;
+}
+.button__drow2::before{
+    bottom : 0 ;
+    left : 0 ;
+    width : 0 ;
+    height : 32px ;
+    border-radius : 16px ;
+    transform-origin : 16px 16px ;
+    transform : rotate( -146deg ) ;
+}
+.button__drow2::after{
+    bottom : 26px ;
+    left : -40px ;
+    width : 0 ;
+    height : 32px ;
+    border-radius : 16px ;
+    transform-origin : 16px 16px ;
+    transform : rotate( -262deg ) ;
+}
+.button__drow1,
+.button__drow1::before,
+.button__drow1::after,
+.button__drow2,
+.button__drow2::before,
+.button__drow2::after{
+    background : var( --back_color ) ;
+}
+.button:hover .button__drow1{
+    animation : drow1 ease-in .06s ;
+    animation-fill-mode : forwards ;
+}
+.button:hover .button__drow1::before{
+    animation : drow2 linear .08s .06s ;
+    animation-fill-mode : forwards ;
+}
+.button:hover .button__drow1::after{
+    animation : drow3 linear .03s .14s ;
+    animation-fill-mode : forwards ;
+}
+.button:hover .button__drow2{
+    animation : drow4 linear .06s .2s ;
+    animation-fill-mode : forwards ;
+}
+.button:hover .button__drow2::before{
+    animation : drow3 linear .03s .26s ;
+    animation-fill-mode : forwards ;
+}
+.button:hover .button__drow2::after{
+    animation : drow5 linear .06s .32s ;
+    animation-fill-mode : forwards ;
+}
+@keyframes drow1{
+    0%   { height : 0 ; }
+    100% { height : 100px ; }
+}
+@keyframes drow2{
+    0%   { width : 0 ; opacity : 0 ;}
+    10%  { opacity : 0 ;}
+    11%  { opacity : 1 ;}
+    100% { width : 120px ; }
+}
+@keyframes drow3{
+    0%   { width : 0 ; }
+    100% { width : 80px ; }
+}
+@keyframes drow4{
+    0%   { height : 0 ; }
+    100% { height : 120px ; }
+}
+@keyframes drow5{
+    0%   { width : 0 ; }
+    100% { width : 124px ; }
+}
+
+.container{
+  margin-top: 25px;
+    width : 100% ;
+    height : 56px ;
+    display : flex ;
+    flex-direction : column ;
+    justify-content : center ;
+    align-items : center ;
+}

@@ -2,18 +2,11 @@ import React from "react";
 import "./Footer.css";
 import { Link } from 'react-router-dom';
 
-// import {
-//   FaMailBulk,
-//   FaInstagram,
-//   FaPhone,
-//   FaLinkedinIn,
-//   FaFacebook,
-// } from "react-icons/fa";
 function Footer() {
   return (
     <footer className="all-pages_footer">
       <div className="footer-cols">
-        <div className="col">
+        <div className="col col-logo">
           <div className="logo">
             <Link to='/'>
               <img src='https://i.imgur.com/Lg3kv0j.png' alt="ECESS Logo" />
@@ -21,7 +14,7 @@ function Footer() {
           </div>
         </div>
 
-        <div className="col">
+        <div className="col col-contact">
           <div className="footer-widget-heading">
             <h3>
               Contact Us{" "}
@@ -31,14 +24,15 @@ function Footer() {
             </h3>
           </div>
           <ul>
-            <li>Arghya : +918017219590</li>
-            <li>Praveen : +917416238044</li>
+            <li>Arghya Kamal Das (President) <br/> +91 8017219590</li>
+            <li>Praveen Thota (Vice President) <br/> +91 7416238044</li>
+            <li>Harshit Loyalka (General Secretary) <br/> +91 9339193537</li>
           </ul>
         </div>
 
-        <div className="col">
+        <div className="col col-link">
           <h3>
-            Useful Links
+            Quick Links
             <div class="underline">
               <span></span>
             </div>
@@ -60,7 +54,7 @@ function Footer() {
           </ul>
         </div>
 
-        <div className="col">
+        <div className="col col-social">
           <h3>
             Follow Us
             <div className="underline">
@@ -90,7 +84,7 @@ function Footer() {
           <br></br>
           <p>
             Designed and Developed by{" "}
-            <b style={{ color: "rgba(244, 233, 111, 0.961)" }}>
+            <b style={{ color: "rgba(23, 32, 42, 0.961)" }}>
               Web Development Team
             </b>{" "}
             .

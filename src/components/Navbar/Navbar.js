@@ -12,9 +12,18 @@ function Navbar() {
   return (
     <nav className='navbar'>
       <div className='hamburger' onClick={handleClick}>
-        <div className="line1"></div>
-        <div className="line2"></div>
-        <div className="line3"></div>
+        {isActive ? (
+          <div className="cross-icon">
+            <div className="line1"></div>
+            <div className="line2"></div>
+          </div>
+        ) : (
+          <div className="hamburger-icon">
+            <div className="line1"></div>
+            <div className="line2"></div>
+            <div className="line3"></div>
+          </div>
+        )}
       </div>
       <div className='nav-content'>
         <div className="logo">
@@ -23,10 +32,10 @@ function Navbar() {
           </Link>
         </div>
         <ul className={isActive ? 'nav-links open' : 'nav-links'}>
-          <li><Link to='/'>Home</Link></li>
-          <li><Link to='/faculty'>Faculty</Link></li>
-          <li><Link to='/team'>Team</Link></li>
-          <li><Link to='/events'>Events</Link></li>
+          <li><Link to='/' onClick={handleClick}>Home</Link></li>
+          <li><Link to='/faculty' onClick={handleClick}>Faculty</Link></li>
+          <li><Link to='/team' onClick={handleClick}>Team</Link></li>
+          <li><Link to='/events' onClick={handleClick}>Events</Link></li>
         </ul>
       </div>
     </nav>
