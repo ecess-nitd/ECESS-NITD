@@ -40,16 +40,16 @@ function Footer() {
 
           <ul>
             <li>
-              <a href="HomePage">Home</a>
+              <a href="/">Home</a>
             </li>
             <li>
-              <a href="FacultyPage">Faculty</a>
+              <a href="faculty">Faculty</a>
             </li>
             <li>
-              <a href="TeamPage">Team</a>
+              <a href="team">Team</a>
             </li>
             <li>
-              <a href="AboutusPage">About Us</a>
+              <a href="events">Events</a>
             </li>
           </ul>
         </div>
