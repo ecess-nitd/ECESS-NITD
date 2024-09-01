@@ -80,11 +80,11 @@ function Footer() {
       <hr />
       <div className="rcopyRight" style={{ backgroundColour: "#492E87" }}>
         <p>
-          <i class="fa fa-copyright"></i>2023 ECESS NITDGP.
+          <i class="fa fa-copyright"></i>2024 ECESS NITDGP.
           <br></br>
           <p>
             Designed and Developed by{" "}
-            <b style={{ color: "rgba(23, 32, 42, 0.961)" }}>
+            <b style={{ color: "black" }}>
               Web Development Team
             </b>{" "}
             .
@@ -92,6 +92,7 @@ function Footer() {
         </p>
       </div>
     </footer>
+    
   );
 }
 
