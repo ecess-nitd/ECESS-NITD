@@ -23,8 +23,9 @@ export const HeadTeamData = [
         linkedin: "#",
         instagram: "#",
     }
-]
-export const FinalTeamData =[
+];
+
+export const FinalTeamData = [
     {
         image: 'https://i.imgur.com/QfHiQYi.jpeg',
         name: "Devansh Gupta",
@@ -121,12 +122,13 @@ export const FinalTeamData =[
         linkedin: "#",
         instagram: "#",
     }
-]
-export const PrefinalTeamData =[
+];
+
+export const PrefinalTeamData = [
     {
         image: 'https://i.imgur.com/b5Q1LZE.jpeg',
         name: "Animesh Punetha",
-        position: "Junior Co-ordinator",
+        position: "Senior Co-ordinator",
         facebook: "#",
         linkedin: "#",
         instagram: "#",
@@ -134,7 +136,7 @@ export const PrefinalTeamData =[
     {
         image: 'https://i.imgur.com/Nd07Adu.jpeg',
         name: "Anisha Kumari",
-        position: "Junior Co-ordinator",
+        position: "Senior Co-ordinator",
         facebook: "#",
         linkedin: "#",
         instagram: "#",
@@ -142,7 +144,7 @@ export const PrefinalTeamData =[
     {
         image: 'https://i.imgur.com/GlTWXrv.jpeg',
         name: "Dhritishree Saha",
-        position: "Junior Co-ordinator",
+        position: "Senior Co-ordinator",
         facebook: "#",
         linkedin: "#",
         instagram: "#",
@@ -150,7 +152,7 @@ export const PrefinalTeamData =[
     {
         image: 'https://i.imgur.com/pFrMgiQ.jpeg',
         name: "Jayesh Toshniwal",
-        position: "Junior Co-ordinator",
+        position: "Senior Co-ordinator",
         facebook: "#",
         linkedin: "#",
         instagram: "#",
@@ -158,7 +160,7 @@ export const PrefinalTeamData =[
     {
         image: 'https://i.imgur.com/MIppZY2.jpeg',
         name: "Manas Mahata",
-        position:"Junior Co-ordinator",
+        position: "Senior Co-ordinator",
         facebook: "#",
         linkedin: "#",
         instagram: "#",
@@ -166,7 +168,7 @@ export const PrefinalTeamData =[
     {
         image: 'https://i.imgur.com/Len0vyv.jpeg',
         name: "Mohammed Asif",
-        position: "Junior Co-ordinator",
+        position: "Senior Co-ordinator",
         facebook: "#",
         linkedin: "#",
         instagram: "#",
@@ -174,7 +176,7 @@ export const PrefinalTeamData =[
     {
         image: 'https://i.imgur.com/Hv5LggV.jpeg',
         name: "R Charisma Alex",
-        position: "Junior Co-ordinator",
+        position: "Senior Co-ordinator",
         facebook: "#",
         linkedin: "#",
         instagram: "#",
@@ -182,7 +184,7 @@ export const PrefinalTeamData =[
     {
         image: 'https://i.imgur.com/XVgU9JD.jpeg',
         name: "Sagnik Dutta",
-        position: "Junior Co-ordinator",
+        position: "Senior Co-ordinator",
         facebook: "#",
         linkedin: "#",
         instagram: "#",
@@ -191,7 +193,7 @@ export const PrefinalTeamData =[
     {
         image: 'https://i.imgur.com/hSdjo7c.jpeg',
         name: "Sarmistha Naskar",
-        position: "Junior Co-ordinator",
+        position: "Senior Co-ordinator",
         facebook: "#",
         linkedin: "#",
         instagram: "#",
@@ -199,7 +201,7 @@ export const PrefinalTeamData =[
     {
         image: 'https://i.imgur.com/0JnVXuO.jpeg',
         name: "Soumyadeep Chakraborty",
-        position: "Junior Co-ordinator",
+        position: "Senior Co-ordinator",
         facebook: "#",
         linkedin: "#",
         instagram: "#",
@@ -207,7 +209,7 @@ export const PrefinalTeamData =[
     {
         image: 'https://i.imgur.com/WaBLzde.jpeg',
         name: "Tanushri Ghosh",
-        position: "Junior Co-ordinator",
+        position: "Senior Co-ordinator",
         facebook: "#",
         linkedin: "#",
         instagram: "#",
@@ -215,7 +217,7 @@ export const PrefinalTeamData =[
     {
         image: 'https://i.imgur.com/ECoK8VO.jpeg',
         name: "Tina Ghosh",
-        position: "Junior Co-ordinator",
+        position: "Senior Co-ordinator",
         facebook: "#",
         linkedin: "#",
         instagram: "#",
@@ -223,9 +225,140 @@ export const PrefinalTeamData =[
     {
         image: 'https://i.imgur.com/wa5nP9m.jpeg',
         name: "Vipin Sharma",
-        position: "Junior Co-ordinator",
+        position: "Senior Co-ordinator",
         facebook: "#",
         linkedin: "#",
         instagram: "#",
     }
-]
+];
+
+export const SecondYearTeamData = [
+    {
+        image: 'https://i.imgur.com/rS4Fy7b.jpeg',
+        name: "Abir Dutta",
+        position: "Junior Co-ordinator",
+        facebook: "#",
+        linkedin: "#",
+        instagram: "#",
+    },
+    {
+        image: 'https://i.imgur.com/dD0QK8W.jpeg',
+        name: "Arnav Gupta",
+        position: "Junior Co-ordinator",
+        facebook: "#",
+        linkedin: "#",
+        instagram: "#",
+    },
+    {
+        image: 'https://i.imgur.com/IqpD9OR.jpeg',
+        name: "Ayush Gupta",
+        position: "Junior Co-ordinator",
+        facebook: "#",
+        linkedin: "#",
+        instagram: "#",
+    },
+    {
+        image: 'https://i.imgur.com/5LqtRcG.jpeg',
+        name: "Binayak Dey",
+        position: "Junior Co-ordinator",
+        facebook: "#",
+        linkedin: "#",
+        instagram: "#",
+    },
+    {
+        image: 'https://i.imgur.com/UBlfmhw.jpeg',
+        name: "Deepika Reddy",
+        position: "Junior Co-ordinator",
+        facebook: "#",
+        linkedin: "#",
+        instagram: "#",
+    },
+    {
+        image: 'https://i.imgur.com/2EMm4RE.jpeg',
+        name: "Esha Jha",
+        position: "Junior Co-ordinator",
+        facebook: "#",
+        linkedin: "#",
+        instagram: "#",
+    },
+    {
+        image: 'https://i.imgur.com/g3rpc9b.jpeg',
+        name: "Jishu Mapdar",
+        position: "Junior Co-ordinator",
+        facebook: "#",
+        linkedin: "#",
+        instagram: "#",
+    },
+    {
+        image: 'https://i.imgur.com/ycTtc8m.jpeg',
+        name: "Malay Roy",
+        position: "Junior Co-ordinator",
+        facebook: "#",
+        linkedin: "#",
+        instagram: "#",
+    },
+    {
+        image: 'https://i.imgur.com/Qz0SS3t.jpeg',
+        name: "Pradipto Narayan Pal",
+        position: "Junior Co-ordinator",
+        facebook: "#",
+        linkedin: "#",
+        instagram: "#",
+    },
+    {
+        image: 'https://i.imgur.com/42ijY4P.jpeg',
+        name: "Priyankori Saha",
+        position: "Junior Co-ordinator",
+        facebook: "#",
+        linkedin: "#",
+        instagram: "#",
+    },
+    {
+        image: 'https://i.imgur.com/75x4rYV.jpeg',
+        name: "Pynda Nanda Gopal",
+        position: "Junior Co-ordinator",
+        facebook: "#",
+        linkedin: "#",
+        instagram: "#",
+    },
+    {
+        image: 'https://i.imgur.com/potv6az.jpeg',
+        name: "Rishi Sai Teja",
+        position: "Junior Co-ordinator",
+        facebook: "#",
+        linkedin: "#",
+        instagram: "#",
+    },
+    {
+        image: 'https://i.imgur.com/Ii995qh.jpeg',
+        name: "Subhankar Maiti",
+        position: "Junior Co-ordinator",
+        facebook: "#",
+        linkedin: "#",
+        instagram: "#",
+    },
+    {
+        image: 'https://i.imgur.com/ip2gLsD.jpeg',
+        name: "Suryashish Saha",
+        position: "Junior Co-ordinator",
+        facebook: "#",
+        linkedin: "#",
+        instagram: "#",
+    },
+    {
+        image: 'https://i.imgur.com/2lmglJ7.jpeg',
+        name: "Triparno Chakrabarty",
+        position: "Junior Co-ordinator",
+        facebook: "#",
+        linkedin: "#",
+        instagram: "#",
+    },
+    {
+        image: 'https://i.imgur.com/QZf58ha.jpeg',
+        name: "Varsha Verma",
+        position: "Junior Co-ordinator",
+        facebook: "#",
+        linkedin: "#",
+        instagram: "#",
+    },
+];

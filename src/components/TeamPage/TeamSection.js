@@ -1,6 +1,6 @@
 import React from 'react'
 import './TeamSection.css'
-import { HeadTeamData } from './teamData'
+import { HeadTeamData, SecondYearTeamData } from './teamData'
 import { FinalTeamData } from './teamData'
 import { PrefinalTeamData } from './teamData'
 
@@ -21,12 +21,7 @@ const TeamSection = () => {
                         {HeadTeamData.map((profile, index) => (
                             <CardTeam
                                 key={index}
-                                image={profile.image}
-                                name={profile.name}
-                                position={profile.position}
-                                facebook={profile.facebook}
-                                linkedin={profile.linkedin}
-                                instagram={profile.instagram}
+                                {...profile}
                             />
                         ))}
                     </div>
@@ -34,12 +29,7 @@ const TeamSection = () => {
                         {FinalTeamData.map((profile, index) => (
                             <CardTeam
                                 key={index}
-                                image={profile.image}
-                                name={profile.name}
-                                position={profile.position}
-                                facebook={profile.facebook}
-                                linkedin={profile.linkedin}
-                                instagram={profile.instagram}
+                                {...profile}
                             />
                         ))}
                     </div>
@@ -50,12 +40,18 @@ const TeamSection = () => {
                         {PrefinalTeamData.map((profile, index) => (
                             <CardTeam
                                 key={index}
-                                image={profile.image}
-                                name={profile.name}
-                                position={profile.position}
-                                facebook={profile.facebook}
-                                linkedin={profile.linkedin}
-                                instagram={profile.instagram}
+                                {...profile}
+                            />
+                        ))}
+                    </div>
+                </div>
+                <div className='members-team'>
+                    <div class='teamheading-team'>Second Year</div>
+                    <div className='each-year-team'>
+                        {SecondYearTeamData.map((profile, index) => (
+                            <CardTeam
+                                key={index}
+                                {...profile}
                             />
                         ))}
                     </div>
