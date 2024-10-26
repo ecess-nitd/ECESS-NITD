@@ -14,7 +14,11 @@
   margin: auto;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
+}
+.logo_social{
+  display: flex;
+  flex-direction: column;
 }
 
 .col h3 {
@@ -68,8 +72,12 @@
   transform: scale(1.1);
 }
 
-.logo img {
+.logo2 img {
   width: 150px;
+  height: 100px;
+}
+.logo2{
+  padding-left: 25px;
 }
 
 hr {

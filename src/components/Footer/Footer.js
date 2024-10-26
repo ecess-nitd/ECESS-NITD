@@ -6,13 +6,38 @@ function Footer() {
   return (
     <footer className="all-pages_footer">
       <div className="footer-cols">
+        <div className="logo_social">
         <div className="col col-logo">
-          <div className="logo">
+          <div className="logo2">
             <Link to='/'>
               <img src='https://i.imgur.com/Lg3kv0j.png' alt="ECESS Logo" />
             </Link>
           </div>
+          </div>
+          <div className="col col-social">
+          <h3>
+            Follow Us
+            <div className="underline">
+              <span></span>
+            </div>
+          </h3>
+          <p>
+            <a href="https://www.facebook.com/ecess.nitdgp/" target="_main">
+              <i className="fa fa-facebook"></i>
+            </a>
+            <a href="https://www.instagram.com/ece_students_society/" target="_main">
+              <i className="fa fa-instagram"></i>
+            </a>
+            <a href="https://www.linkedin.com/company/73885679/admin/feed/posts/" target="_main">
+              <i className="fa fa-linkedin"></i>
+            </a>
+            <a href="mailto:ecess.ece.nitdurgapur@gmail.com" target="_main">
+              <i className="fa fa-envelope"></i>
+            </a>
+          </p>
         </div>
+        </div>
+        
 
         <div className="col col-contact">
           <div className="footer-widget-heading">
@@ -24,9 +49,9 @@ function Footer() {
             </h3>
           </div>
           <ul>
-            <li>Arghya Kamal Das (President) <br/> +91 8017219590</li>
-            <li>Praveen Thota (Vice President) <br/> +91 7416238044</li>
-            <li>Harshit Loyalka (General Secretary) <br/> +91 9339193537</li>
+            <li>Arghya Kamal Das (President) <br/><i class="fa fa-phone"></i> +91 8017219590</li>
+            <li>Praveen Thota (Vice President) <br/><i class="fa fa-phone"></i> +91 7416238044</li>
+            <li>Harshit Loyalka (General Secretary) <br/><i class="fa fa-phone"></i> +91 9339193537</li>
           </ul>
         </div>
 
@@ -37,44 +62,20 @@ function Footer() {
               <span></span>
             </div>
           </h3>
-
           <ul>
-            <li>
-              <a href="/">Home</a>
-            </li>
-            <li>
-              <a href="faculty">Faculty</a>
-            </li>
-            <li>
-              <a href="team">Team</a>
-            </li>
-            <li>
-              <a href="events">Events</a>
-            </li>
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+        <li>
+          <Link to="/faculty">Faculty</Link>
+        </li>
+        <li>
+          <Link to="/team">Team</Link>
+        </li>
+        <li>
+          <Link to="/events">Events</Link>
+        </li>
           </ul>
-        </div>
-
-        <div className="col col-social">
-          <h3>
-            Follow Us
-            <div className="underline">
-              <span></span>
-            </div>
-          </h3>
-          <p>
-            <a href="https://www.facebook.com/ecess.nitdgp/">
-              <i className="fa fa-facebook"></i>
-            </a>
-            <a href="https://www.instagram.com/ece_students_society/">
-              <i className="fa fa-instagram"></i>
-            </a>
-            <a href="https://www.linkedin.com/company/73885679/admin/feed/posts/">
-              <i className="fa fa-linkedin"></i>
-            </a>
-            <a href="mailto:ecess.ece.nitdurgapur@gmail.com">
-              <i className="fa fa-envelope"></i>
-            </a>
-          </p>
         </div>
       </div>
       <hr />
