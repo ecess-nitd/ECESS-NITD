@@ -26,7 +26,7 @@ function Navbar() {
         )}
       </div>
       <div className='nav-content'>
-        <div className="logo">
+        <div className="logo1">
           <Link to='/'>
             <img src='https://i.imgur.com/Lg3kv0j.png' alt="ECESS Logo" />
           </Link>
