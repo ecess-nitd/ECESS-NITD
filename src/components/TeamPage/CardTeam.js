@@ -2,7 +2,7 @@ import React from 'react'
 import './CardTeam.css'
 import 'remixicon/fonts/remixicon.css';
 
-const CardTeam = ({ image, name, position, facebook, linkedin, instagram }) => {
+const CardTeam = ({ image, name, position, linkedin, instagram }) => {
     return (
         <div className="card-team">
             <div className="pic-team"><img src={image} alt=""/></div>
@@ -11,7 +11,6 @@ const CardTeam = ({ image, name, position, facebook, linkedin, instagram }) => {
                 <span className="post-team">{position}</span>
             </div>
             <div className="social-team">
-                <a href={facebook} className="facebook"><i class="ri-facebook-box-line"></i></a>
                 <a href={linkedin} className="linkedin"><i class="ri-linkedin-box-line"></i></a>
                 <a href={instagram} className="instagram"><i class="ri-instagram-line"></i></a>
             </div>

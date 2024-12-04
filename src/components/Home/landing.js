@@ -112,13 +112,13 @@ const landing = () => {
                 <h1 className="section-title-team">
                     <span className="title1">Post</span> <span className="title2">Bearers</span>
                 </h1>
-                <Slider {...settings}>
+                <Slider className="sliderclass" {...settings}>
                     {TeamDataHome.map((member, index) => (
-                        <div key={index} className="slider-card-container">
-                            <TeamCardHome data={member} />
-                        </div>
+                        <TeamCardHome key={index} data={member} />
                     ))}
                 </Slider>
+
+                
                 <div class="container">
                     <Link to='/team' className="button type--A">
                         <div class="button__line"></div>

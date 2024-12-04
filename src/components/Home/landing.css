@@ -2,7 +2,7 @@
 @import "~slick-carousel/slick/slick-theme.css";
 
 .hero-section {
-    background-image: url('/public/herosection.jpg');
+    background-image: url('https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcm0yMThiYXRjaDQta2F0aWUtMTcuanBn.jpg');
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -91,6 +91,8 @@
 
 .about-us-section{
   background-image: url('/public/eventwhitehome.jpg');
+  background-attachment: fixed;
+  background-position: center;
   background-size: cover;
   image-resolution: high;
   background-position: center;
@@ -98,7 +100,6 @@
 }
 
 .about-us-section {
-    background-color: rgb(253, 253, 252);
     padding: 80px 60px;
     align-items: center;
     text-align: center;
@@ -112,15 +113,11 @@
   
 .section-title .title1 {
     color: rgb(0, 0, 0); 
-    /* border-bottom: 5px solid rgb(16, 191, 197);
-    border-radius: 1.5px 1.5px 1.5px 1.5px; */
     padding-bottom: 5px;
   }
 
   .section-title .title2 {
     color: rgb(16, 191, 197);
-    /* border-bottom: 5px solid black;
-    border-radius: 1.5px 1.5px 1.5px 1.5px; */
     padding-bottom: 5px;
   }
   
@@ -263,46 +260,44 @@
 
 .section-title-team .title1 {
   color: rgb(255, 255, 255); 
-  /* border-bottom: 5px solid rgb(16, 191, 197);
-  border-radius: 1.5px 1.5px 1.5px 1.5px; */
   padding-bottom: 5px;
 }
 
 .section-title-team .title2 {
   color: rgb(16, 191, 197);
-  /* border-bottom: 5px solid rgb(255, 255, 255);
-  border-radius: 1.5px 1.5px 1.5px 1.5px; */
   padding-bottom: 5px;
 }
 
-.slider-card-container {
-    padding: 0 10px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+.slick-slide>div {
+  padding: 0 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .slick-slide {
-    padding: 0 5px; 
+  padding: 0 5px; 
 }
 
 @media (max-width: 1200px) {
-  .slick-slide {
-    padding: 0 30px; 
-  }
+.slick-slide {
+  padding: 0 30px; 
+}
 }
 
 @media (max-width: 1000px) {
-  .slick-slide {
-    padding: 0 50px; 
-  }
+.slick-slide {
+  padding: 0 50px; 
+}
 }
 
 @media (max-width: 800px) {
-  .slick-slide {
-    padding: 0 0px; 
-  }
+.slick-slide {
+  padding: 0 0px; 
 }
+}
+
+
 
 
 .type--A{

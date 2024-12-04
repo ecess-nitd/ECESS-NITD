@@ -2,7 +2,7 @@ import React from 'react';
 import './teamcardhome.css';
 
 const TeamCardHome = ({ data }) => {
-    const { image, name, position, facebook, linkedin, instagram } = data;
+    const { image, name, position, linkedin, instagram } = data;
     return (
         <div className="card-teamhome">
             <div className="img-bx-teamhome">
@@ -12,9 +12,6 @@ const TeamCardHome = ({ data }) => {
                 <div className="detail-teamhome">
                     <h2>{name}<br /><span>{position}</span></h2>
                     <ul className="sci-teamhome">
-                        <li>
-                            <a href={facebook} className="facebook"><i className="ri-facebook-box-line"></i></a>
-                        </li>
                         <li>
                             <a href={linkedin} className="linkedin"><i className="ri-linkedin-box-line"></i></a>
                         </li>
