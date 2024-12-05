@@ -88,7 +88,7 @@ const Landing = () => {
                     <div
                         key={index}
                         onClick={() => setCurrentSlide(index)}
-                        className={`w-6 h-1 transition-all duration-300 cursor-pointer ${
+                        className={`w-6 h-0.5 transition-all duration-300 cursor-pointer ${
                         currentSlide === index ? 'bg-black' : 'bg-gray-400'
                         }`}
                     />
@@ -164,7 +164,7 @@ const Landing = () => {
                     </div>
                 </div>
                 <div class="container">
-                    <Link to="/events" style={{ textDecoration: 'none' }}>
+                    <Link to="/team" style={{ textDecoration: 'none' }}>
                         <div className="d-flex justify-content-center mt-n1">
                             <button
                             className="btn btn-white text-center d-flex align-items-center fs-4 px-4 py-2 rounded-pill border-0 shadow-none"
@@ -186,7 +186,7 @@ const Landing = () => {
                             >
                             <span style={{ color: '#00BCD4', fontWeight: '600', fontSize: '20px' }}>Our</span>
                             <span style={{ color: '#FFFFFF', fontWeight: '600', fontSize: '20px', marginLeft: '0.5px' }}>Events</span>
-                            <span style={{ color: '#00BCD4', marginLeft: '1px' }}>→</span>
+                            <span style={{ color: '#00BCD4', fontSize: '20px', marginLeft: '1px' }}>→</span>
                             </button>
                         </div>
                     </Link>
