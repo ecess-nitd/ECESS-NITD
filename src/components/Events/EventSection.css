@@ -34,7 +34,7 @@
     border-top: #ddd 1.5px solid;
     height: 1px;
     width: 120px;
-    z-index: -1;
+    /* z-index: -1; */
 }
   
 .event-text{

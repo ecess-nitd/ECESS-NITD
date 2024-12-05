@@ -5,7 +5,7 @@ function Faculty() {
   return (
     <div className="rprofessors">
       <div class="heading-faculty">
-        <h1>Our Faculty</h1>
+        <div className="facultyheading">Our Faculty</div>
         <div class="grey-line-faculty"></div>
         <div class="coloured-line-faculty"></div>
       </div>
