@@ -10,7 +10,7 @@ function Navbar() {
   };
 
   return (
-    <nav className='navbar'>
+    <nav>
       <div className='hamburger' onClick={handleClick}>
         {isActive ? (
           <div className="cross-icon">

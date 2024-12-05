@@ -22,7 +22,7 @@
     align-items: center;
 }
 
-h1{
+.headingmain{
     text-align: center;
     color: rgb(16, 191, 197);
     font-size: 55px;
@@ -41,7 +41,7 @@ h1{
 
 .grey-line-team {
     text-align: center;
-    border-top: #ddd 1px solid;
+    border-top: #ddd 1.5px solid;
     height: 1px;
     width: 120px;
     margin-left: calc(50% - 55px);

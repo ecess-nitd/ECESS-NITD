@@ -10,7 +10,7 @@ const TeamSection = () => {
     return (
         <div className="body-team">
             <div class="heading-team">
-                <h1>Our Team</h1>
+                <div className='headingmain'>Our Team</div>
                 <div class="grey-line-team"></div>
                 <div class="coloured-line-team"></div>
             </div>

@@ -1,93 +1,28 @@
 @import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
 
-.hero-section {
-    background-image: url('https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcm0yMThiYXRjaDQta2F0aWUtMTcuanBn.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    text-align: center;
-    position: relative;
-}
-
-.heading-1{
-    font-size: 3rem;
-    font-weight: bold;
-    color: white
-}
-  
-.heading-2{
-    font-size: 3rem;
-    font-weight: bold;
-    color: rgb(16, 191, 197);
-}
-
-@media (max-width: 768px) {
-  .heading-1, .heading-2 {
-      font-size: 1.8rem;
-  }
-}
-
-@media (max-width: 576px) {
-  .heading-1, .heading-2 {
-      font-size: 1.8rem;
-  }
-}
-
-.arrow-container{
-    width: 100px;
-    height: 120px;
-    margin: 0 auto;
+.carousel-item img {
     position: absolute;
-    bottom: 25px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0; /* Ensure the image stays behind the overlay */
+}
+
+.carousel-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
     left: 0;
     right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Blackish overlay with 50% opacity */
+    z-index: 1; /* Make sure the overlay is above the image */
 }
-  
-.arrow-1{
-    width: 80px;
-    height: 80px;
-    background: rgb(16, 191, 197);;
-    opacity: 0.5;
-    border-radius: 50%;
-    position: absolute;
-}
-  
-.arrow-2{
-    width: 60px;
-    height: 60px;
-    background: #00BCD4;
-    border-radius: 50%;
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    z-index: 1;
-    display: table;
-}
-  
-.arrow-2:before{
-    width: 52px;
-    height: 52px;
-    content: "";
-    border: 2px solid #006064;
-    border-radius: 50%;
-    position: absolute;
-    top: 4px;
-    left: 4px;
-}
-  
-.arrow-2 i.fa{
-    font-size: 30px;
-    display: table-cell;
-    vertical-align: middle;
-    text-align: center;
-    color: #006064;
-}
+
+
 
 .about-us-section{
   background-image: url('/public/eventwhitehome.jpg');
@@ -173,93 +108,21 @@
   }
 
 .event-home-section{
-  background-image: url('/public/pic6.jpeg');
+  background-image: url('https://wallpaperbat.com/img/746784-l242nnn-information-technology-wallpaper-background-tech-hd-wallpaper-background-download.png');
   background-size: cover;
   image-resolution: high;
   background-position: center;
-  /* padding: 60px 80px; */
   padding-top: 60px;
   padding-bottom: 50px;
-  /* opacity: 0.8; */
 }
-
-
 
 .team-home-section {
   background-image: url('/public/teamsection.jpg');
+  background-attachment: fixed;
   background-size: cover;
   image-resolution: high;
   background-position: center;
   padding: 50px 80px;
-}
-
-/* .gallery{
-  margin-top: 50px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 19px;
-}
-
-.event-home-image {
-	width: 200px;
-	height: 200px;
-	display: block;
-	border-radius: 10px;
-}
-
-.card-event-home {
-	width: 240px;
-  align-items: center;
-	background-color: #FFF;
-	box-shadow: 0 0 0 1px rgba(#000, .05), 0 20px 50px 0 rgba(#000, .1);
-	border-radius: 15px;
-	overflow: hidden;
-	padding: 1.25rem;
-	position: relative;
-	transition: .15s ease-in;
-}
-
-.card-event-home::hover{
-  box-shadow: 0 0 0 2px #16C79A, 0 10px 60px 0 rgba(#000, .1);
-}
-
-.card-image {
-	border-radius: 15px;
-	overflow: hidden;
-}
-
-.event-card-header {
-	margin-top: 1rem;
-	display: flex;
-	align-items: center;
-  text-align: center;
-	justify-content: space-between;
-	p {
-    text-transform: capitalize;
-		font-weight: bold;
-		font-size: 1rem;
-		line-height: 1.25;
-		padding-right: 1rem;
-		text-decoration: none;
-		color: inherit;
-		will-change: transform;
-		&:after {
-			content: "";
-			position: absolute;
-			left: 0;
-			top: 0;
-			right: 0;
-			bottom: 0;
-		}
-	}
-} */
-
-.event-section{
-  display: flex;
-  align-items: center;
-  justify-items: center;
 }
 
 .section-title-team {
