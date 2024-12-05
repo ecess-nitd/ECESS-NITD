@@ -5,7 +5,6 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'remixicon/fonts/remixicon.css';
 import 'tailwindcss/tailwind.css';
-import "tw-elements-react/dist/css/tw-elements-react.min.css";
 
 
 
