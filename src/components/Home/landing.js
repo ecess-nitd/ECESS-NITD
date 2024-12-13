@@ -164,7 +164,7 @@ const Landing = () => {
                     </div>
                 </div>
                 <div class="container">
-                    <Link to="/team" style={{ textDecoration: 'none' }}>
+                    <Link to="/events" style={{ textDecoration: 'none' }}>
                         <div className="d-flex justify-content-center mt-n1">
                             <button
                             className="btn btn-white text-center d-flex align-items-center fs-4 px-4 py-2 rounded-pill border-0 shadow-none"
