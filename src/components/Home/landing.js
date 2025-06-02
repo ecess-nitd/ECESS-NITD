@@ -46,7 +46,7 @@ const Landing = () => {
     };
 
     const selectedEvents = eventsData.filter(event =>
-        [0, 1, 2, 6].includes(event.id)
+        [0, 1, 3, 4].includes(event.id)
     );
 
     const [currentSlide, setCurrentSlide] = useState(0);
