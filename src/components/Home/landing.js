@@ -2,11 +2,13 @@ import React, { useEffect, useState } from "react";
 import "./landing.css";
 import Slider from 'react-slick';
 import TeamCardHome from './teamcardhome'
-import { TeamDataHome } from './teamDataHome';
+import { HeadTeamData, FinalTeamData } from '../TeamPage/teamData';
 import { Link } from "react-router-dom";
 import eventsData from '../Events/eventsData';
 
 const Landing = () => {
+    const TeamDataHome = [...HeadTeamData, ...FinalTeamData]; // Show first 7 from final year
+    
     const settings = {
         infinite: true,
         speed: 500,
