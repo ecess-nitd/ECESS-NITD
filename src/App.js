@@ -5,7 +5,7 @@ import Team from './components/TeamPage/TeamSection';
 import Faculty from './components/FacultyPage/Faculty';
 import Navbar from './components/Navbar/Navbar';
 import { useState, useEffect } from 'react';
-import GridLoader from 'react-spinners/GridLoader';
+import LoadingSpinner from './components/LoadingSpinner/LoadingSpinner';
 import 'remixicon/fonts/remixicon.css';
 import ScrollToTop from './components/ScrollToTop';
 import 'remixicon/fonts/remixicon.css';
@@ -14,20 +14,30 @@ import EventSection from './components/Events/EventSection';
 import EventDetail from './components/Events/EventDetails';
 
 function App() {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
+  const [showSpinner, setShowSpinner] = useState(true);
 
   useEffect(() => {
-    setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
+    const timer = setTimeout(() => {
+      setLoading(false); // This will trigger the fadeout
     }, 5000);
+
+    return () => clearTimeout(timer);
   }, []);
+
+  const handleSpinnerFinish = () => {
+    setShowSpinner(false); // Hide spinner completely after fadeout
+  };
 
   return (
     <div className="App">
-      {loading ? (
-        <GridLoader className="my-loader" color="#36d7b7" />
-      ) : (
+      {showSpinner && (
+        <LoadingSpinner 
+          isLoading={loading} 
+          onFinish={handleSpinnerFinish}
+        />
+      )}
+      {!showSpinner && (
         <Router>
           <ScrollToTop/>
           <Navbar />
