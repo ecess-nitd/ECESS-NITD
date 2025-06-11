@@ -1,7 +1,7 @@
 const eventsData = [
     {
         id: 0,
-        image: '/exordium2025.jpg',
+        image: 'https://live.staticflickr.com/65535/54581810905_1d5abe1a68_b.jpg',
         title: 'Exordium 2.0',
         description: `Your gateway to ECE - An exclusive event designed to meet faculty, explore research, discover innovative projects, understand the ECE curriculum, learn about ECE advancements, and participate in Q&A sessions.`,
         modaldescription: `Welcome to EXORDIUM 2.0 - Your Gateway to ECE! This exclusive event is designed for students to explore the vast opportunities in Electronics and Communication Engineering. Join us to meet distinguished faculty members, explore cutting-edge research, discover innovative projects, understand the comprehensive ECE curriculum, learn about the latest advancements in the field, and participate in interactive Q&A sessions. This is your chance to get a comprehensive overview of what makes ECE at NIT Durgapur special and how you can be part of this exciting journey in technology and innovation.`,
@@ -11,7 +11,7 @@ const eventsData = [
     },
     {
         id: 1,
-        image: '/innovacion.jpg',
+        image: 'https://live.staticflickr.com/65535/54581669114_44d2c369fe_b.jpg',
         title: 'Innovacion',
         description: `Explore Embedded Systems, IoT, and Automation in this comprehensive hands-on experience. Get exclusive free access, work on multiple projects, dive into microcontrollers, simulate and test projects on Tinkercad, earn E-certificates, and take your first step towards embedded systems and IoT.`,
         modaldescription: `Welcome to INNOVACION - your gateway to the future of technology! This exciting event focuses on Embedded Systems, IoT, and Automation, offering participants an exclusively free hands-on experience. Work on several projects crafted just for you, dive deep into microcontrollers, and get practical experience by simulating and testing projects on Tinkercad before hardware implementation. Earn valuable E-certificates by attending the full event, marking your first step towards embedded systems and IoT - a standout addition to your CV. No pre-requisite knowledge required! Join us for this comprehensive exploration of cutting-edge technology that's shaping our world.`,
