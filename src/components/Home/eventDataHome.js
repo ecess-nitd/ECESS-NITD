@@ -31,5 +31,13 @@ const eventDataHome = [
         image: 'https://i.imgur.com/1ifl3fy.jpeg',
         title: 'Placement Talk',
     },
+    {
+        image: 'https://live.staticflickr.com/65535/54581810905_1d5abe1a68_b.jpg',
+        title: 'Exordium 2.0',
+    },
+    {
+        image: 'https://live.staticflickr.com/65535/54581669114_44d2c369fe_b.jpg',
+        title: 'Innovacion',
+    },
 ]
 export default eventDataHome

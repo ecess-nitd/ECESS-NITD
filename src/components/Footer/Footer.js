@@ -46,9 +46,9 @@ function Footer() {
             </h3>
           </div>
           <ul>
-            <li>Arghya Kamal Das (President) <br/><i class="fa fa-phone"></i> +91 8017219590</li>
-            <li>Praveen Thota (Vice President) <br/><i class="fa fa-phone"></i> +91 7416238044</li>
-            <li>Harshit Loyalka (General Secretary) <br/><i class="fa fa-phone"></i> +91 9339193537</li>
+            <li>Dhritishree Saha (President)<br/><i class="fa fa-phone"></i> +91 97329 96467</li>
+            <li>Manas Mahata (Vice President)<br/><i class="fa fa-phone"></i> +91 62942 60685</li>
+            <li>Mohammed Asif (General Secretary)<br/><i class="fa fa-phone"></i> +91 89672 90251</li>
           </ul>
         </div>
 
@@ -70,7 +70,7 @@ function Footer() {
       <hr />
       <div className="rcopyRight" >
         <p>
-          <i class="fa fa-copyright"></i>2024 ECESS NITDGP.
+          <i class="fa fa-copyright"></i>2025 ECESS NITDGP.
           <br></br>
           <p>
             Designed and Developed by{" "}

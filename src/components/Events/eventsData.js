@@ -1,6 +1,26 @@
 const eventsData = [
     {
         id: 0,
+        image: 'https://live.staticflickr.com/65535/54581810905_1d5abe1a68_b.jpg',
+        title: 'Exordium 2.0',
+        description: `Your gateway to ECE - An exclusive event designed to meet faculty, explore research, discover innovative projects, understand the ECE curriculum, learn about ECE advancements, and participate in Q&A sessions.`,
+        modaldescription: `Welcome to EXORDIUM 2.0 - Your Gateway to ECE! This exclusive event is designed for students to explore the vast opportunities in Electronics and Communication Engineering. Join us to meet distinguished faculty members, explore cutting-edge research, discover innovative projects, understand the comprehensive ECE curriculum, learn about the latest advancements in the field, and participate in interactive Q&A sessions. This is your chance to get a comprehensive overview of what makes ECE at NIT Durgapur special and how you can be part of this exciting journey in technology and innovation.`,
+        date: `17th February, 2025`,
+        time: `6PM onwards`,
+        venue: `Auditorium 2, ECE Department`
+    },
+    {
+        id: 1,
+        image: 'https://live.staticflickr.com/65535/54581669114_44d2c369fe_b.jpg',
+        title: 'Innovacion',
+        description: `Explore Embedded Systems, IoT, and Automation in this comprehensive hands-on experience. Get exclusive free access, work on multiple projects, dive into microcontrollers, simulate and test projects on Tinkercad, earn E-certificates, and take your first step towards embedded systems and IoT.`,
+        modaldescription: `Welcome to INNOVACION - your gateway to the future of technology! This exciting event focuses on Embedded Systems, IoT, and Automation, offering participants an exclusively free hands-on experience. Work on several projects crafted just for you, dive deep into microcontrollers, and get practical experience by simulating and testing projects on Tinkercad before hardware implementation. Earn valuable E-certificates by attending the full event, marking your first step towards embedded systems and IoT - a standout addition to your CV. No pre-requisite knowledge required! Join us for this comprehensive exploration of cutting-edge technology that's shaping our world.`,
+        date: `3rd - 4th April, 2025`,
+        time: `6PM onwards`,
+        venue: `ECE Department`
+    },
+    {
+        id: 2,
         image: 'https://i.imgur.com/oLrJAu0.jpeg',
         title: 'Exordium',
         description:`This is an exclusive introductory event for first-year students in the Electronics and Communication 
@@ -13,7 +33,7 @@ const eventsData = [
         venue: `Auditorium 2, ECE dept`
     },
     {
-        id: 1,
+        id: 3,
         image: 'https://i.imgur.com/yhJ5Z0x.jpeg',
         title: 'VLSI Workshop',
         description:`ECESS, NIT Durgapur is organizing a 4-day VLSI (Very Large Scale Integration) workshop that requires 
@@ -26,7 +46,7 @@ const eventsData = [
         venue: `EC31, 3rd floor, ECE dept`
     },    
     {
-        id: 2,
+        id: 4,
         image: 'https://i.imgur.com/xWTO9hf.jpeg',
         title: 'Tech Talk',
         description:`The talkshow featuring Harsh Dokania, an accomplished alumnus of NIT Durgapur and current Qualcomm professional,
@@ -38,7 +58,7 @@ const eventsData = [
         venue: `Online`
     },
     {
-        id: 3,
+        id: 5,
         image: 'https://i.imgur.com/jLKspxt.jpeg',
         title: 'Alumni Talkshow',
         description:`Talkshow featuring Mr. Sai Vara Prasad Bolloju, a distinguished alumnus currently employed at Qualcomm. The event provided 
@@ -50,7 +70,7 @@ const eventsData = [
         venue: `Online`
     },
     {
-        id: 4,
+        id: 6,
         image: 'https://i.imgur.com/BRi3oMq.jpeg',
         title: 'Invited Talk',
         description:`A talkshow by Dr. Karan Nathwani, an expert in speech processing, has experience working in France, UK and India on speech 
@@ -62,7 +82,7 @@ const eventsData = [
         venue: `SL 31, ECE Department, NIT DURGAPUR`
     },
     {
-        id: 5,
+        id: 7,
         image: 'https://i.imgur.com/1hMJMFX.jpeg',
         title: 'PCB Design Workshop',
         description:`A two-day workshop focused on Printed Circuit Board design. It aims to teach participants about the various components of a 
@@ -74,7 +94,7 @@ const eventsData = [
         venue: `Online`
     },
     {
-        id: 6,
+        id: 8,
         image: 'https://i.imgur.com/cRLtPvh.png',
         title: 'Signals Decoded',
         description:`A workshop and seminar focusing on Signal Processing using MATLAB, along with an exclusive session on the Emergence of Graphs 
@@ -86,7 +106,7 @@ const eventsData = [
         venue: `Online`
     },
     {
-        id: 7,
+        id: 9,
         image: 'https://i.imgur.com/7j7d8aB.jpeg',
         title: 'VLSI Workshop',
         description:`A workshop  designed to introduce participants to the fundamental concepts of Very-Large-Scale Integration (VLSI) and Digital Hardware 
@@ -98,7 +118,7 @@ const eventsData = [
         Mode: `Online`
     },
     {
-        id: 8,
+        id: 10,
         image: 'https://i.imgur.com/1ifl3fy.jpeg',
         title: 'Placement Talk',
         description:`This event offers comprehensive insights into the placement process, covering eligibility criteria, required skills, an overview of 
@@ -110,7 +130,7 @@ const eventsData = [
         venue: `Online`
     },
     {
-        id: 9,
+        id: 11,
         image: 'https://i.imgur.com/WwxWzgJ.jpeg',
         title: 'Embedded Systems Workshop',
         description:`It provided a comprehensive introduction to embedded systems,where  Participants will learn about microprocessors, microcontrollers, 
