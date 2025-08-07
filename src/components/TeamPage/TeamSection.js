@@ -1,6 +1,6 @@
 import React from 'react'
 import './TeamSection.css'
-import { HeadTeamData, SecondYearTeamData } from './teamData'
+import { HeadTeamData } from './teamData'
 import { FinalTeamData } from './teamData'
 import { PrefinalTeamData } from './teamData'
 
@@ -45,7 +45,7 @@ const TeamSection = () => {
                         ))}
                     </div>
                 </div>
-                <div className='members-team'>
+                {/*<div className='members-team'>
                     <div class='teamheading-team'>Second Year</div>
                     <div className='each-year-team'>
                         {SecondYearTeamData.map((profile, index) => (
@@ -56,6 +56,7 @@ const TeamSection = () => {
                         ))}
                     </div>
                 </div>
+                */}
             </div>
         </div>
     )
