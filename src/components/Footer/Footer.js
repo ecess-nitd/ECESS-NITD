@@ -31,7 +31,7 @@ const Footer = () => {
               </p>
 
               {/* Socials */}
-              <nav aria-label="Social links" className="flex items-center gap-3">
+              <div aria-label="Social links" className="mt-4 flex items-center gap-3">
                 {[
                   { href: "https://www.facebook.com/ecess.nitdgp/", label: "Facebook", Icon: Facebook },
                   { href: "https://www.instagram.com/ece_students_society/", label: "Instagram", Icon: Instagram },
@@ -49,7 +49,7 @@ const Footer = () => {
                     <Icon className="h-5 w-5" strokeWidth={2} />
                   </a>
                 ))}
-              </nav>
+              </div>
             </section>
 
             {/* Quick Links */}
@@ -62,7 +62,6 @@ const Footer = () => {
                   { to: "/", label: "Home" },
                   { to: "/team", label: "Team" },
                   { to: "/events", label: "Events" },
-                  { to: "/about", label: "About Us" },
                 ].map(({ to, label }) => (
                   <li key={label}>
                     <Link

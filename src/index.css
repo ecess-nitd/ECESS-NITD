@@ -1,21 +1,73 @@
 @tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 @layer base {
   html {
-    @apply text-neutral-800;
-    :root {
-      --brand: hsl(174 62% 45%);
-    }
-  }
-  html.dark {
     @apply text-neutral-50;
     @apply bg-neutral-800;
-    --brand: hsl(174 62% 55%);
+    :root {
+      --brand: 174 62% 55% !important;
+      --background: 222.2 84% 4.9% !important;
+      --foreground: 210 40% 98% !important;
+      --card: 222.2 84% 4.9% !important;
+      --border: 217.2 32.6% 17.5% !important;
+      --muted-foreground: 215 20.2% 65.1% !important;
+      --glass: 222.2 84% 4.9% !important;
+      --shadow-elegant: 0 8px 32px rgba(0, 0, 0, 0.3) !important;
+    }
   }
 }
 
-@tailwind components;
-@tailwind utilities;
+/* Custom brand colors with higher specificity */
+.text-brand {
+  color: hsl(174 62% 55%) !important;
+}
+
+.hover\:text-brand:hover {
+  color: hsl(174 62% 55%) !important;
+}
+
+.bg-brand {
+  background-color: hsl(174 62% 55%) !important;
+}
+
+.bg-brand\/60 {
+  background-color: hsl(174 62% 55% / 0.6) !important;
+}
+
+.ring-brand {
+  --tw-ring-color: hsl(174 62% 55%) !important;
+}
+
+.focus-visible\:ring-brand:focus-visible {
+  --tw-ring-color: hsl(174 62% 55%) !important;
+}
+
+/* Background and other CSS variables as classes */
+.bg-background {
+  background-color: hsl(222.2 84% 4.9%) !important;
+}
+
+.bg-card {
+  background-color: hsl(222.2 84% 4.9%) !important;
+}
+
+.text-foreground {
+  color: hsl(210 40% 98%) !important;
+}
+
+.text-muted-foreground {
+  color: hsl(215 20.2% 65.1%) !important;
+}
+
+.border-border {
+  border-color: hsl(217.2 32.6% 17.5%) !important;
+}
+
+.bg-glass {
+  background-color: hsl(222.2 84% 4.9%) !important;
+}
 
 body {
   margin: 0;
