@@ -82,26 +82,26 @@
 
 .footer-col ul li a:hover {
   color: #10bfc5;
-  font-weight: 600;
-  font-size: 16px
+  font-weight: normal;
+  
 }
 
 .social-icons a {
-  margin-right: 10px;
-  font-size: 18px;
+  margin-right: 25px;
+  font-size: 28px;
   color: #555;
-  padding: 8px;
-  border-radius: 50%;
-  background-color: #f0f0f0;
-  transition: all 0.3s ease;
+  padding: 0; 
+  background: none; 
+  border-radius: 0; 
+  transition: color 0.3s ease;
   display: inline-block;
 }
 
 .social-icons a:hover {
-  background-color: #10bfc5;
-  color: white;
-  transform: scale(1.1);
+  color: #10bfc5;
+  transform: none; 
 }
+
 
 .footer-bottom {
   text-align: center;
@@ -118,14 +118,45 @@
   }
 
   .footer-col {
-    margin-bottom: 25px;
+    margin-bottom: 20px;
   }
 }
+
+
+@media (max-width: 600px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 0; 
+  }
+
+  .footer-col {
+    margin: 5px 0;  
+    padding: 0;      
+    text-align: center;
+  }
+
+  .logo2 img {
+    max-width: 120px; 
+    height: auto;
+  }
+
+  .footer-col h3 {
+    margin-top: 5px;  
+    margin-bottom: 5px;
+  }
+
+  .footer-col p {
+    margin-top: 3px; 
+  
+  }
+}
+
 .logo2 {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Aligns logo and text to the left */
-  margin-top: -50px;           /* No upward shift */
+  align-items: flex-start;
+  margin-top: -50px;           
 }
 
 .logo2 img {
@@ -134,7 +165,7 @@
   margin-bottom: 5px;
 }
 .logo-text {
-  margin-top: -10px;     /* or adjust to position it well */
+  margin-top: -10px;     
   font-size: 16px;
   font-weight: normal;
   line-height: 1.4;
@@ -142,7 +173,7 @@
 }
 
 
-/* Footer column styling if not already present */
+
 .footer-col {
   flex: 1;
   padding: 10px 20px;
