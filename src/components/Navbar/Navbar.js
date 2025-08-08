@@ -33,7 +33,7 @@ function Navbar() {
         </div>
         <ul className={isActive ? 'nav-links open' : 'nav-links'}>
           <li><Link to='/' onClick={handleClick}>Home</Link></li>
-          <li><Link to='/faculty' onClick={handleClick}>Faculty</Link></li>
+          {/*<li><Link to='/faculty' onClick={handleClick}>Faculty</Link></li>*/}
           <li><Link to='/team' onClick={handleClick}>Team</Link></li>
           <li><Link to='/events' onClick={handleClick}>Events</Link></li>
         </ul>

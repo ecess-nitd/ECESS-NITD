@@ -26,12 +26,13 @@
 
 .about-us-section{
   background-image: url('/public/eventwhitehome.jpg');
-  background-attachment: fixed;
+  background-attachment: scroll; /* Changed from fixed for better performance */
   background-position: center;
   background-size: cover;
-  image-resolution: high;
-  background-position: center;
+  background-repeat: no-repeat;
   padding: 50px 20px;
+  /* Add will-change for better performance */
+  will-change: transform;
 }
 
 .about-us-section {
