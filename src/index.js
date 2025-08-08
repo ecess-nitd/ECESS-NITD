@@ -6,18 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import 'remixicon/fonts/remixicon.css';
 import 'tailwindcss/tailwind.css';
 
-// Register service worker for image caching
-if ('serviceWorker' in navigator && process.env.NODE_ENV === 'production') {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/sw.js')
-      .then((registration) => {
-        console.log('SW registered: ', registration);
-      })
-      .catch((registrationError) => {
-        console.log('SW registration failed: ', registrationError);
-      });
-  });
-}
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

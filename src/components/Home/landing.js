@@ -5,7 +5,6 @@ import TeamCardHome from './teamcardhome'
 import { HeadTeamData, FinalTeamData } from '../TeamPage/teamData';
 import { Link } from "react-router-dom";
 import eventsData from '../Events/eventsData';
-import { optimizeImageUrl, preloadImages } from '../../utils/imageOptimization';
 
 const Landing = () => {
     const TeamDataHome = [...HeadTeamData, ...FinalTeamData]; // Show first 7 from final year
@@ -52,7 +51,6 @@ const Landing = () => {
 
     const [currentSlide, setCurrentSlide] = useState(0);
     const [isPaused, setIsPaused] = useState(false);
-    const [imagesLoaded, setImagesLoaded] = useState(false);
       
     const slides = [
         "https://nitdgp.ac.in/uploads/0507284ec43c705a861174910f4d6d17.JPG",
@@ -61,22 +59,6 @@ const Landing = () => {
     ];
       
     const totalSlides = slides.length;
-
-    // Preload critical images
-    useEffect(() => {
-        const criticalImages = [
-            slides[0], // First slide image
-            'https://i.imgur.com/Lg3kv0j.png', // Logo
-            ...slides.slice(1, 3) // Remaining slides
-        ];
-        
-        preloadImages(criticalImages)
-            .then(() => setImagesLoaded(true))
-            .catch(err => {
-                console.warn('Some images failed to preload:', err);
-                setImagesLoaded(true); // Continue anyway
-            });
-    }, []);
 
     const goToSlide = (slideIndex) => {
         setCurrentSlide(slideIndex);
@@ -96,14 +78,14 @@ const Landing = () => {
     };
       
     useEffect(() => {
-        if (isPaused || !imagesLoaded) return; // Don't auto-scroll when paused or images not loaded
+        if (isPaused) return; // Don't auto-scroll when paused
         
         const interval = setInterval(() => {
             setCurrentSlide((prevSlide) => (prevSlide + 1) % totalSlides);
         }, 3000); // Auto-scroll every 4 seconds
       
         return () => clearInterval(interval);
-    }, [totalSlides, isPaused, imagesLoaded]);
+    }, [totalSlides, isPaused]);
 
     return (
         <div className="landing-page">

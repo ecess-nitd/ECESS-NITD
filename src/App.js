@@ -12,7 +12,6 @@ import 'remixicon/fonts/remixicon.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import EventSection from './components/Events/EventSection';
 import EventDetail from './components/Events/EventDetails';
-import imageMonitor from './utils/imagePerformanceMonitor';
 
 function App() {
   const [loading, setLoading] = useState(true);

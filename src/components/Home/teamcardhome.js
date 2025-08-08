@@ -6,7 +6,7 @@ const TeamCardHome = ({ data }) => {
     return (
         <div className="card-teamhome">
             <div className="img-bx-teamhome">
-                <img src={image} alt="img" loading="lazy" />
+                <img src={image} alt="img" />
             </div>
             <div className="content-teamhome">
                 <div className="detail-teamhome">

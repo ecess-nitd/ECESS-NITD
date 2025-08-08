@@ -17,7 +17,7 @@ const EventDetail = () => {
                 </div>
                 <div className="main-content-event">
                     <div className="event-image-event">
-                        <img src={event.image} alt="Event" height={400} width={400} loading="lazy" />
+                        <img src={event.image} alt="Event" height={400} width={400}/>
                     </div>
                     <div className="event-details-event">
                         <p className="description-event">
