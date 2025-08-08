@@ -8,7 +8,7 @@ const CardEvent = ({ image, title, description }) => {
     return (
         <div className="card-event" >
             <div className="card-event-image-container">
-                <img src={image} alt={title} className="card-event-image" height={200} width={200}/>
+                <img src={image} alt={title} className="card-event-image" height={200} width={200} loading="lazy" />
             </div>
             <div className="card-event-details">
                 <h2 className="card-event-title">{title}</h2>

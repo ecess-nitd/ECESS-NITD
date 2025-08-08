@@ -18,6 +18,8 @@ const EventSlider = () => {
                src={event.image} 
                  alt={event.title} 
                 className="object-contain w-full h-full max-h-[400px] transition duration-300 ease-in-out transform hover:scale-105 hover:opacity-30 border-double hover:border-dashed"
+                loading="lazy"
+                decoding="async"
               />
               <div className="absolute inset-0 flex justify-center items-center bg-white bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity duration-300">
                <span className="text-white text-lg font-semibold">{event.title}</span>

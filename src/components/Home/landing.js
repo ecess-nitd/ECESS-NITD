@@ -5,13 +5,14 @@ import TeamCardHome from './teamcardhome'
 import { HeadTeamData, FinalTeamData } from '../TeamPage/teamData';
 import { Link } from "react-router-dom";
 import eventsData from '../Events/eventsData';
+import { optimizeImageUrl, preloadImages } from '../../utils/imageOptimization';
 
 const Landing = () => {
     const TeamDataHome = [...HeadTeamData, ...FinalTeamData]; // Show first 7 from final year
     
     const settings = {
         infinite: true,
-        speed: 500,
+        speed: 500, 
         autoplay: true,
         autoplaySpeed: 2000,
         slidesToShow: 4,
@@ -50,6 +51,8 @@ const Landing = () => {
     );
 
     const [currentSlide, setCurrentSlide] = useState(0);
+    const [isPaused, setIsPaused] = useState(false);
+    const [imagesLoaded, setImagesLoaded] = useState(false);
       
     const slides = [
         "https://nitdgp.ac.in/uploads/0507284ec43c705a861174910f4d6d17.JPG",
@@ -58,14 +61,49 @@ const Landing = () => {
     ];
       
     const totalSlides = slides.length;
+
+    // Preload critical images
+    useEffect(() => {
+        const criticalImages = [
+            slides[0], // First slide image
+            'https://i.imgur.com/Lg3kv0j.png', // Logo
+            ...slides.slice(1, 3) // Remaining slides
+        ];
+        
+        preloadImages(criticalImages)
+            .then(() => setImagesLoaded(true))
+            .catch(err => {
+                console.warn('Some images failed to preload:', err);
+                setImagesLoaded(true); // Continue anyway
+            });
+    }, []);
+
+    const goToSlide = (slideIndex) => {
+        setCurrentSlide(slideIndex);
+        setIsPaused(true);
+        // Resume auto-scroll after 3 seconds of manual interaction
+        setTimeout(() => setIsPaused(false), 3000);
+    };
+
+    const nextSlide = () => {
+        const nextIndex = (currentSlide + 1) % totalSlides;
+        goToSlide(nextIndex);
+    };
+
+    const prevSlide = () => {
+        const prevIndex = currentSlide === 0 ? totalSlides - 1 : currentSlide - 1;
+        goToSlide(prevIndex);
+    };
       
     useEffect(() => {
+        if (isPaused || !imagesLoaded) return; // Don't auto-scroll when paused or images not loaded
+        
         const interval = setInterval(() => {
             setCurrentSlide((prevSlide) => (prevSlide + 1) % totalSlides);
-        }, 3500); // Auto-scroll every 3 seconds
+        }, 3000); // Auto-scroll every 4 seconds
       
         return () => clearInterval(interval);
-    }, [totalSlides]);
+    }, [totalSlides, isPaused, imagesLoaded]);
 
     return (
         <div className="landing-page">
@@ -85,35 +123,32 @@ const Landing = () => {
                     </div>
                 ))}
 
-                <div className="absolute bottom-5 left-0 right-0 flex justify-center space-x-1 pb-5 z-20">
+                <div className="absolute bottom-8 left-0 right-0 flex justify-center space-x-3 pb-5 z-20">
                     {slides.map((_, index) => (
-                    <div
+                    <button
                         key={index}
-                        onClick={() => setCurrentSlide(index)}
-                        className={`w-6 h-0.5 transition-all duration-300 cursor-pointer ${
-                        currentSlide === index ? 'bg-black' : 'bg-gray-400'
+                        onClick={() => goToSlide(index)}
+                        className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                        currentSlide === index 
+                            ? 'bg-brand shadow-lg shadow-brand/50 scale-125' 
+                            : 'bg-white/50 hover:bg-white/70 backdrop-blur-sm'
                         }`}
                     />
                     ))}
                 </div>
                 
-                <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between z-20">
+                <div className="absolute left-8 right-8 top-1/2 flex -translate-y-1/2 transform justify-between z-20">
                     <button
-                        onClick={() =>
-                            setCurrentSlide((prevSlide) =>
-                                prevSlide === 0 ? totalSlides - 1 : prevSlide - 1
-                        )}
-                        className="text-white text-3xl hover:text-gray-200 pl-10 z-10"
+                        onClick={prevSlide}
+                        className="group flex h-12 w-12 items-center justify-center rounded-full bg-black/20 backdrop-blur-md border border-white/20 text-white transition-all duration-300 hover:bg-brand/30 hover:border-brand/50 hover:scale-110"
                     >
-                        ❮
+                        <span className="text-xl transition-transform duration-300 group-hover:-translate-x-0.5">❮</span>
                     </button>
                     <button
-                        onClick={() =>
-                            setCurrentSlide((prevSlide) => (prevSlide + 1) % totalSlides)
-                        }
-                        className="text-white text-3xl hover:text-gray-200 pr-10"
+                        onClick={nextSlide}
+                        className="group flex h-12 w-12 items-center justify-center rounded-full bg-black/20 backdrop-blur-md border border-white/20 text-white transition-all duration-300 hover:bg-brand/30 hover:border-brand/50 hover:scale-110"
                     >
-                        ❯
+                        <span className="text-xl transition-transform duration-300 group-hover:translate-x-0.5">❯</span>
                     </button>
                 </div>
             </div>
@@ -149,46 +184,39 @@ const Landing = () => {
                 <h1 className="section-title-team">
                     <span className="title1">Featured</span> <span className="title2">Events</span>
                 </h1>
-                <div className="bg-blue-950 bg-opacity-80 py-0">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 px-12">
+                {/* <div className=" "> */}
+                    <div className="bg-gradient-to-b from-background/90 to-background/70 backdrop-blur-sm grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 px-8 max-w-7xl mx-auto">
                         {selectedEvents.map(event => (
-                        <div className="relative rounded-lg shadow-lg overflow-hidden">
-                            <img 
-                            src={event.image} 
-                                alt={event.title} 
-                                className="object-contain w-full h-full max-h-[400px] transition duration-300 ease-in-out transform hover:scale-105 hover:opacity-30 border-double hover:border-dashed"
-                            />
-                            <div className="absolute inset-0 flex justify-center items-center bg-black bg-opacity-50 opacity-0 hover:opacity-80 transition-opacity duration-300">
-                            <span className="text-white text-lg font-semibold">{event.title}</span>
+                        <div key={event.id} className="group relative rounded-xl shadow-xl overflow-hidden bg-card/50 backdrop-blur-sm border border-border/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-brand/20">
+                            <div className="aspect-square overflow-hidden">
+                                <img 
+                                    src={event.image} 
+                                    alt={event.title} 
+                                    className="object-cover w-full h-full transition-all duration-500 group-hover:scale-110"
+                                />
+                            </div>
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300">
+                                <div className="absolute bottom-0 left-0 right-0 p-6">
+                                    <h3 className="text-white text-lg font-bold mb-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                                        {event.title}
+                                    </h3>
+                                    <div className="w-12 h-0.5 bg-brand transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+                                </div>
                             </div>
                         </div>
                         ))}
                     </div>
-                </div>
-                <div class="container">
-                    <Link to="/events" style={{ textDecoration: 'none' }}>
-                        <div className="d-flex justify-content-center mt-n1">
-                            <button
-                            className="btn btn-white text-center d-flex align-items-center fs-4 px-4 py-2 rounded-pill border-0 shadow-none"
-                            style={{
-                                backgroundColor: 'rgba(255, 255, 255, 0.2)', // Transparent white background
-                                borderRadius: '50px', // Curved edges
-                                transition: 'transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out',
-                                backdropFilter: 'blur(10px)', // Adds a blur effect for a frosted glass look
-                                border: '1px solid rgba(255, 255, 255, 0.3)',
-                            }}
-                            onMouseEnter={(e) => {
-                                e.currentTarget.style.transform = 'scale(1.05)';
-                                e.currentTarget.style.boxShadow = '0px 4px 8px rgba(0, 0, 0, 0.2)';
-                            }}
-                            onMouseLeave={(e) => {
-                                e.currentTarget.style.transform = 'scale(1)';
-                                e.currentTarget.style.boxShadow = 'none';
-                            }}
-                            >
-                            <span style={{ color: '#00BCD4', fontWeight: '600', fontSize: '20px' }}>Our</span>
-                            <span style={{ color: '#FFFFFF', fontWeight: '600', fontSize: '20px', marginLeft: '0.5px' }}>Events</span>
-                            <span style={{ color: '#00BCD4', fontSize: '20px', marginLeft: '1px' }}>→</span>
+                {/* </div> */}
+                <div className="container mx-auto px-4">
+                    <Link to="/events" className="block">
+                        <div className="flex justify-center mt-8">
+                            <button className="group relative overflow-hidden rounded-full bg-gradient-to-r from-brand/20 to-brand/10 backdrop-blur-md border border-brand/30 px-8 py-4 text-lg font-semibold text-white shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-brand/25 focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 focus:ring-offset-background">
+                                <span className="relative z-10 flex items-center gap-2">
+                                    <span className="text-brand">Our</span>
+                                    <span className="text-white">Events</span>
+                                    <span className="text-brand transition-transform duration-300 group-hover:translate-x-1">→</span>
+                                </span>
+                                <div className="absolute inset-0 bg-gradient-to-r from-brand/10 to-brand/5 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
                             </button>
                         </div>
                     </Link>
@@ -203,31 +231,17 @@ const Landing = () => {
                         <TeamCardHome key={index} data={member} />
                     ))}
                 </Slider>
-                <div class="container">
-                    <Link to="/team" style={{ textDecoration: 'none' }}>
-                        <div className="d-flex justify-content-center mt-n1">
-                            <button
-                            className="btn btn-white text-center d-flex align-items-center fs-4 px-4 py-2 rounded-pill border-0 shadow-none"
-                            style={{
-                                backgroundColor: 'rgba(255, 255, 255, 0.2)', // Transparent white background
-                                borderRadius: '50px', // Curved edges
-                                transition: 'transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out',
-                                backdropFilter: 'blur(10px)', // Adds a blur effect for a frosted glass look
-                                border: '1px solid rgba(255, 255, 255, 0.3)',
-                            }}
-                            onMouseEnter={(e) => {
-                                e.currentTarget.style.transform = 'scale(1.05)';
-                                e.currentTarget.style.boxShadow = '0px 4px 8px rgba(0, 0, 0, 0.2)';
-                            }}
-                            onMouseLeave={(e) => {
-                                e.currentTarget.style.transform = 'scale(1)';
-                                e.currentTarget.style.boxShadow = 'none';
-                            }}
-                            >
-                            <span style={{ color: '#00BCD4', fontWeight: '600', fontSize: '20px' }}>Meet</span>
-                            <span style={{ color: '#FFFFFF', fontWeight: '600', fontSize: '20px', marginLeft: '0.5px' }}>Our</span>
-                            <span style={{ color: '#00BCD4', fontWeight: '600', fontSize: '20px', marginLeft: '0.5px' }}>Team</span>
-                            <span style={{ color: '#FFFFFF', fontSize: '20px', marginLeft: '1px' }}>→</span>
+                <div className="container mx-auto px-4">
+                    <Link to="/team" className="block">
+                        <div className="flex justify-center mt-8">
+                            <button className="group relative overflow-hidden rounded-full bg-gradient-to-r from-brand/20 to-brand/10 backdrop-blur-md border border-brand/30 px-8 py-4 text-lg font-semibold text-white shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-brand/25 focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 focus:ring-offset-background">
+                                <span className="relative z-10 flex items-center gap-2">
+                                    <span className="text-brand">Meet</span>
+                                    <span className="text-white">Our</span>
+                                    <span className="text-brand">Team</span>
+                                    <span className="text-white transition-transform duration-300 group-hover:translate-x-1">→</span>
+                                </span>
+                                <div className="absolute inset-0 bg-gradient-to-r from-brand/10 to-brand/5 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
                             </button>
                         </div>
                     </Link>

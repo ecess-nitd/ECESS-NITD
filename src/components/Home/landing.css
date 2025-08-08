@@ -26,12 +26,13 @@
 
 .about-us-section{
   background-image: url('/public/eventwhitehome.jpg');
-  background-attachment: fixed;
+  background-attachment: scroll; /* Changed from fixed for better performance */
   background-position: center;
   background-size: cover;
-  image-resolution: high;
-  background-position: center;
+  background-repeat: no-repeat;
   padding: 50px 20px;
+  /* Add will-change for better performance */
+  will-change: transform;
 }
 
 .about-us-section {
@@ -110,19 +111,24 @@
 .event-home-section{
   background-image: url('https://wallpaperbat.com/img/746784-l242nnn-information-technology-wallpaper-background-tech-hd-wallpaper-background-download.png');
   background-size: cover;
-  image-resolution: high;
+  background-repeat: no-repeat;
   background-position: center;
+  background-attachment: scroll; /* Changed from default for better performance */
   padding-top: 60px;
   padding-bottom: 50px;
+  /* Add will-change for better performance */
+  will-change: transform;
 }
 
 .team-home-section {
   background-image: url('/public/teamsection.jpg');
-  background-attachment: fixed;
+  background-attachment: scroll; /* Changed from fixed for better mobile performance */
   background-size: cover;
-  image-resolution: high;
+  background-repeat: no-repeat;
   background-position: center;
   padding: 50px 80px;
+  /* Add will-change for better performance */
+  will-change: transform;
 }
 
 .section-title-team {
