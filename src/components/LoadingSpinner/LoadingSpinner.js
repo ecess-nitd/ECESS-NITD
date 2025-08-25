@@ -3,16 +3,31 @@ import './LoadingSpinner.css';
 
 const LoadingSpinner = ({ isLoading = true, onFinish }) => {
     const [shouldFadeOut, setShouldFadeOut] = useState(false);
+    const [loadingTime, setLoadingTime] = useState(0);
 
     useEffect(() => {
         if (!isLoading) {
             setShouldFadeOut(true);
             const timer = setTimeout(() => {
                 if (onFinish) onFinish();
-            }, 200);
+            }, 300); // Reduced from 200ms for smoother transition
 
             return () => clearTimeout(timer);
         }
+    }, [isLoading, onFinish]);
+
+    // Fallback timer to prevent infinite loading
+    useEffect(() => {
+        const fallbackTimer = setTimeout(() => {
+            if (isLoading) {
+                setShouldFadeOut(true);
+                setTimeout(() => {
+                    if (onFinish) onFinish();
+                }, 300);
+            }
+        }, 8000); // 8 second fallback
+
+        return () => clearTimeout(fallbackTimer);
     }, [isLoading, onFinish]);
 
     return (
@@ -34,6 +49,7 @@ const LoadingSpinner = ({ isLoading = true, onFinish }) => {
                         src="https://i.imgur.com/Lg3kv0j.png"
                         alt="ECESS Logo"
                         className="logo-image responsive-logo"
+                        loading="eager" // Force immediate loading for logo
                     />
                 </div>
             </div>

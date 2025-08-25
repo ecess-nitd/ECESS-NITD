@@ -18,15 +18,42 @@ function App() {
   const [showSpinner, setShowSpinner] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false); // This will trigger the fadeout
-    }, 5000);
+    // Preload critical images before showing app
+    const preloadCriticalImages = async () => {
+      const criticalImages = [
+        'https://i.imgur.com/Lg3kv0j.png', // ECESS Logo
+        'https://nitdgp.ac.in/uploads/0507284ec43c705a861174910f4d6d17.JPG', // Landing slide 1
+      ];
 
-    return () => clearTimeout(timer);
+      try {
+        // Start preloading critical images
+        const imagePromises = criticalImages.map(src => {
+          return new Promise((resolve) => {
+            const img = new Image();
+            img.onload = () => resolve(src);
+            img.onerror = () => resolve(src); // Continue even if image fails
+            img.src = src;
+          });
+        });
+
+        // Wait for critical images with timeout
+        await Promise.race([
+          Promise.all(imagePromises),
+          new Promise(resolve => setTimeout(resolve, 3000)) // 3 second timeout
+        ]);
+      } catch (error) {
+        console.warn('Image preloading failed:', error);
+      }
+
+      // Hide loading spinner
+      setLoading(false);
+    };
+
+    preloadCriticalImages();
   }, []);
 
   const handleSpinnerFinish = () => {
-    setShowSpinner(false); // Hide spinner completely after fadeout
+    setShowSpinner(false);
   };
 
   return (
