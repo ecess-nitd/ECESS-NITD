@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './LoadingSpinner.css';
 
-const LoadingSpinner = ({ isLoading = true, onFinish }) => {
+const LoadingSpinner = ({ isLoading = true, onFinish, loadingProgress = 0 }) => {
     const [shouldFadeOut, setShouldFadeOut] = useState(false);
     const [loadingTime, setLoadingTime] = useState(0);
 
@@ -25,7 +25,7 @@ const LoadingSpinner = ({ isLoading = true, onFinish }) => {
                     if (onFinish) onFinish();
                 }, 300);
             }
-        }, 8000); // 8 second fallback
+        }, 20000); // 20 second fallback (increased for more images)
 
         return () => clearTimeout(fallbackTimer);
     }, [isLoading, onFinish]);
@@ -46,10 +46,10 @@ const LoadingSpinner = ({ isLoading = true, onFinish }) => {
             <div className="loader-content">
                 <div className="logo-container">
                     <img
-                        src="https://i.imgur.com/Lg3kv0j.png"
+                        src="/images/logos/ecess-logo.png"
                         alt="ECESS Logo"
                         className="logo-image responsive-logo"
-                        loading="eager" // Force immediate loading for logo
+                        loading="eager"
                     />
                 </div>
             </div>

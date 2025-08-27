@@ -53,9 +53,9 @@ const Landing = () => {
     const [isPaused, setIsPaused] = useState(false);
       
     const slides = [
-        "https://nitdgp.ac.in/uploads/0507284ec43c705a861174910f4d6d17.JPG",
-        "https://i.imgur.com/7jLBiUX.jpeg",
-        "https://i.imgur.com/i8iclAE.jpeg",
+        "/images/carousel/slide-1.jpg",
+        "/images/carousel/slide-2.jpeg",
+        "/images/carousel/slide-3.jpeg",
     ];
       
     const totalSlides = slides.length;
