@@ -14,7 +14,16 @@ function Faculty() {
           <div className="lines"></div>
           <div className="imgBx">
             {" "}
-            <img className="each-prof" src='https://i.imgur.com/LhNZkkv.png' alt="" loading="lazy" />
+            <img 
+              className="each-prof" 
+              src='https://i.imgur.com/LhNZkkv.png' 
+              alt="Arvind Choubey" 
+              loading="lazy"
+              onError={(e) => {
+                console.warn('Failed to load faculty image: Arvind Choubey');
+                e.target.style.display = 'none';
+              }}
+            />
           </div>
 
           <div className="contxt">
@@ -67,6 +76,10 @@ function Faculty() {
               src='https://i.imgur.com/aBnmCAb.png'
               alt="Dr.Sanjay Dhar Roy"
               loading="lazy"
+              onError={(e) => {
+                console.warn('Failed to load faculty image: Dr.Sanjay Dhar Roy');
+                e.target.style.display = 'none';
+              }}
             />
           </div>
 
@@ -105,7 +118,7 @@ function Faculty() {
                 </ul>
               </div>
 
-              <div className="tBtn">
+              <div class="tBtn">
                 <button>
                   <a href="https://nitdgp.ac.in/department/electronics-and-communication-engineering/faculty-6/sanjay-dhar-roy-1">
                     More Details

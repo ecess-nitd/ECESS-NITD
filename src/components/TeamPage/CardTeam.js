@@ -5,7 +5,17 @@ import 'remixicon/fonts/remixicon.css';
 const CardTeam = ({ image, name, position, linkedin, instagram }) => {
     return (
         <div className="card-team">
-            <div className="pic-team"><img src={image} alt=""/></div>
+            <div className="pic-team">
+                <img 
+                    src={image} 
+                    alt={name}
+                    loading="lazy"
+                    onError={(e) => {
+                        console.warn(`Failed to load team member image: ${name}`);
+                        e.target.style.display = 'none';
+                    }}
+                />
+            </div>
             <div className="team-content-team">
                 <h4 className="title-team">{name}</h4>
                 <span className="post-team">{position}</span>

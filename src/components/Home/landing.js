@@ -53,9 +53,9 @@ const Landing = () => {
     const [isPaused, setIsPaused] = useState(false);
       
     const slides = [
-        "https://nitdgp.ac.in/uploads/0507284ec43c705a861174910f4d6d17.JPG",
-        "https://i.imgur.com/7jLBiUX.jpeg",
-        "https://i.imgur.com/i8iclAE.jpeg",
+        "/images/carousel/slide-1.jpg",
+        "/images/carousel/slide-2.jpeg",
+        "/images/carousel/slide-3.jpeg",
     ];
       
     const totalSlides = slides.length;
@@ -87,6 +87,20 @@ const Landing = () => {
         return () => clearInterval(interval);
     }, [totalSlides, isPaused]);
 
+    // Preload next slide images for smoother transitions
+    useEffect(() => {
+        const preloadNextSlides = () => {
+            const nextIndex = (currentSlide + 1) % totalSlides;
+            const nextSlide = slides[nextIndex];
+            if (nextSlide) {
+                const img = new Image();
+                img.src = nextSlide;
+            }
+        };
+
+        preloadNextSlides();
+    }, [currentSlide, totalSlides, slides]);
+
     return (
         <div className="landing-page">
             <div className="carousel relative w-full h-[100vh] overflow-hidden">
@@ -98,9 +112,14 @@ const Landing = () => {
                         }`}
                     >
                         <img
-                        src={slide}
-                        alt={`Slide ${index + 1}`}
-                        className="w-full h-full object-cover"
+                            src={slide}
+                            alt={`Slide ${index + 1}`}
+                            className="w-full h-full object-cover"
+                            loading={index === 0 ? "eager" : "lazy"} // First slide loads immediately
+                            onError={(e) => {
+                                console.warn(`Failed to load slide ${index + 1}:`, slide);
+                                e.target.style.display = 'none';
+                            }}
                         />
                     </div>
                 ))}
@@ -175,6 +194,11 @@ const Landing = () => {
                                     src={event.image} 
                                     alt={event.title} 
                                     className="object-cover w-full h-full transition-all duration-500 group-hover:scale-110"
+                                    loading="lazy"
+                                    onError={(e) => {
+                                        console.warn(`Failed to load event image: ${event.title}`);
+                                        e.target.style.display = 'none';
+                                    }}
                                 />
                             </div>
                             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300">
