@@ -52,20 +52,6 @@ const LoadingSpinner = ({ isLoading = true, onFinish, loadingProgress = 0 }) => 
                         loading="eager"
                     />
                 </div>
-                
-                {/* Progress indicator */}
-                <div className="loading-info">
-                    <div className="loading-text">
-                        {loadingProgress < 100 ? 'Loading images...' : 'Ready!'}
-                    </div>
-                    <div className="progress-bar">
-                        <div 
-                            className="progress-fill" 
-                            style={{ width: `${loadingProgress}%` }}
-                        ></div>
-                    </div>
-                    <div className="progress-text">{Math.round(loadingProgress)}%</div>
-                </div>
             </div>
         </div>
     );
