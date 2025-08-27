@@ -16,40 +16,81 @@ import EventDetail from './components/Events/EventDetails';
 function App() {
   const [loading, setLoading] = useState(true);
   const [showSpinner, setShowSpinner] = useState(true);
+  const [loadingProgress, setLoadingProgress] = useState(0);
 
   useEffect(() => {
-    // Preload critical images before showing app
-    const preloadCriticalImages = async () => {
-      const criticalImages = [
-        'https://i.imgur.com/Lg3kv0j.png', // ECESS Logo
-        'https://nitdgp.ac.in/uploads/0507284ec43c705a861174910f4d6d17.JPG', // Landing slide 1
+    // Preload ALL critical images before showing app
+    const preloadAllImages = async () => {
+      const allImages = [
+        // Logo
+        '/images/logos/ecess-logo.png',
+        
+        // Carousel slides
+        '/images/carousel/slide-1.jpg',
+        '/images/carousel/slide-2.jpeg',
+        '/images/carousel/slide-3.jpeg',
+        
+        // Featured events (only the 4 shown on home page)
+        '/images/events/exordium-2.jpg',
+        '/images/events/innovacion.jpg',
+        '/images/events/vlsi-workshop.jpg',
+        '/images/events/tech-talk.jpg',
+        
+        // Team members (only the ones shown on home page)
+        '/images/team/dhritishree-saha.jpeg',
+        '/images/team/manas-mahata.jpeg',
+        '/images/team/mohammed-asif.jpeg',
+        '/images/team/animesh-punetha.jpeg',
+        '/images/team/r-charisma-alex.jpeg',
+        '/images/team/tina-ghosh.jpeg',
+        '/images/team/sarmistha-naskar.jpeg',
+        '/images/team/soumyadeep-chakraborty.jpeg',
+        '/images/team/vipin-sharma.jpeg',
+        '/images/team/tanushri-ghosh.jpeg',
+        '/images/team/anisha-kumari.jpeg',
+        '/images/team/jayesh-toshniwal.jpeg',
+        '/images/team/sagnik-dutta.jpeg',
       ];
 
+      let loadedCount = 0;
+      const totalImages = allImages.length;
+
       try {
-        // Start preloading critical images
-        const imagePromises = criticalImages.map(src => {
+        // Start preloading all images with progress tracking
+        const imagePromises = allImages.map(src => {
           return new Promise((resolve) => {
             const img = new Image();
-            img.onload = () => resolve(src);
-            img.onerror = () => resolve(src); // Continue even if image fails
+            img.onload = () => {
+              loadedCount++;
+              setLoadingProgress((loadedCount / totalImages) * 100);
+              resolve(src);
+            };
+            img.onerror = () => {
+              console.warn(`Failed to load: ${src}`);
+              loadedCount++;
+              setLoadingProgress((loadedCount / totalImages) * 100);
+              resolve(src); // Continue even if image fails
+            };
             img.src = src;
           });
         });
 
-        // Wait for critical images with timeout
+        // Wait for ALL images to load (or timeout)
         await Promise.race([
           Promise.all(imagePromises),
-          new Promise(resolve => setTimeout(resolve, 3000)) // 3 second timeout
+          new Promise(resolve => setTimeout(resolve, 15000)) // 15 second timeout
         ]);
+        
+        console.log(`Loaded ${loadedCount}/${totalImages} images successfully`);
       } catch (error) {
         console.warn('Image preloading failed:', error);
       }
 
-      // Hide loading spinner
+      // Hide loading spinner only when everything is loaded
       setLoading(false);
     };
 
-    preloadCriticalImages();
+    preloadAllImages();
   }, []);
 
   const handleSpinnerFinish = () => {
@@ -62,6 +103,7 @@ function App() {
         <LoadingSpinner 
           isLoading={loading} 
           onFinish={handleSpinnerFinish}
+          loadingProgress={loadingProgress}
         />
       )}
       {!showSpinner && (
